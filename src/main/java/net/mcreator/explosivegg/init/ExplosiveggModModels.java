@@ -10,6 +10,7 @@ import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.explosivegg.client.model.ModelsamuraiHELM;
+import net.mcreator.explosivegg.client.model.Modelring;
 import net.mcreator.explosivegg.client.model.ModelZombieMobs2;
 import net.mcreator.explosivegg.client.model.ModelSkeletonVindicator3;
 import net.mcreator.explosivegg.client.model.ModelSkeletonPillager_1;
@@ -30,5 +31,6 @@ public class ExplosiveggModModels {
 		event.registerLayerDefinition(ModelSkeletonPillager_1.LAYER_LOCATION, ModelSkeletonPillager_1::createBodyLayer);
 		event.registerLayerDefinition(ModelSkeletonEvoker13.LAYER_LOCATION, ModelSkeletonEvoker13::createBodyLayer);
 		event.registerLayerDefinition(ModelBodySamurai.LAYER_LOCATION, ModelBodySamurai::createBodyLayer);
+		event.registerLayerDefinition(Modelring.LAYER_LOCATION, Modelring::createBodyLayer);
 	}
 }

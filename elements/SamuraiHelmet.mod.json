@@ -23,7 +23,7 @@
     "leggingsSpecialInfo": [],
     "bootsSpecialInfo": [],
     "helmetModelName": "ModelsamuraiHELM",
-    "helmetModelPart": "Head",
+    "helmetModelPart": "Hat",
     "helmetModelTexture": "samuraihelmet.png",
     "bodyModelName": "ModelBodySamurai",
     "bodyModelPart": "body",

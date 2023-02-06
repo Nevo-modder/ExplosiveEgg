@@ -35,7 +35,7 @@ public class Modelring<T extends Entity> extends EntityModel<T> {
 				CubeListBuilder.create().texOffs(40, 19).mirror().addBox(-4.0F, -7.0F, -5.0F, 8.0F, 2.0F, 1.0F, new CubeDeformation(0.0F))
 						.mirror(false).texOffs(36, 16).addBox(-5.0F, -7.0F, 4.0F, 10.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)).texOffs(31, 23)
 						.addBox(4.0F, -7.0F, -5.0F, 1.0F, 2.0F, 9.0F, new CubeDeformation(0.0F)),
-				PartPose.offset(0.0F, 0.0F, 0.0F));
+				PartPose.offset(0.0F, 29.0F, 0.0F));
 		PartDefinition cube_r1 = Head.addOrReplaceChild("cube_r1",
 				CubeListBuilder.create().texOffs(31, 23).addBox(4.0F, -7.0F, -4.0F, 1.0F, 2.0F, 9.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -3.1416F, 0.0F, 3.1416F));

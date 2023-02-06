@@ -2,10 +2,6 @@ package net.mcreator.explosivegg.procedures;
 
 import org.checkerframework.checker.units.qual.Time;
 
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
-
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
@@ -36,6 +32,8 @@ public class LKeyProcedure {
 		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY)
 				.getItem() == ExplosiveggModItems.HAT_HELMET.get() && ExplosiveggModVariables.MapVariables.get(world).Lightning == true) {
 			if (ExplosiveggModVariables.MapVariables.get(world).LTime == false) {
+				ExplosiveggModVariables.MapVariables.get(world).LTimeSec = 0;
+				ExplosiveggModVariables.MapVariables.get(world).syncData(world);
 				ExplosiveggModVariables.MapVariables.get(world).LTime = true;
 				ExplosiveggModVariables.MapVariables.get(world).syncData(world);
 				if (world instanceof ServerLevel _level) {
@@ -70,7 +68,8 @@ public class LKeyProcedure {
 						|| ExplosiveggModVariables.MapVariables.get(world).LightningUse == 30) {
 					if (entity instanceof Player _player && !_player.level.isClientSide())
 						_player.displayClientMessage(
-								new TextComponent((ExplosiveggModVariables.MapVariables.get(world).LightningUse + "Uses left to get next ability!")),
+								new TextComponent(
+										(ExplosiveggModVariables.MapVariables.get(world).LightningUse + "Uses left to get the next ability!")),
 								(true));
 				}
 				if (ExplosiveggModVariables.MapVariables.get(world).LightningUse == 80) {
@@ -86,32 +85,7 @@ public class LKeyProcedure {
 						}
 					}
 				}
-				new Object() {
-					private int ticks = 0;
-					private float waitTicks;
-					private LevelAccessor world;
-
-					public void start(LevelAccessor world, int waitTicks) {
-						this.waitTicks = waitTicks;
-						MinecraftForge.EVENT_BUS.register(this);
-						this.world = world;
-					}
-
-					@SubscribeEvent
-					public void tick(TickEvent.ServerTickEvent event) {
-						if (event.phase == TickEvent.Phase.END) {
-							this.ticks += 1;
-							if (this.ticks >= this.waitTicks)
-								run();
-						}
-					}
-
-					private void run() {
-						ExplosiveggModVariables.MapVariables.get(world).LTime = false;
-						ExplosiveggModVariables.MapVariables.get(world).syncData(world);
-						MinecraftForge.EVENT_BUS.unregister(this);
-					}
-				}.start(world, 200);
+				LightningTimerProcedure.execute(world);
 			} else {
 				if (entity instanceof Player _player && !_player.level.isClientSide())
 					_player.displayClientMessage(new TextComponent("Can't use it right now, wait."), (true));

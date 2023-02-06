@@ -84,7 +84,7 @@ public abstract class SamuraiHelmetItem extends ArmorItem {
 				public HumanoidModel getArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
 					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(),
 							Map.of("head",
-									new ModelsamuraiHELM(Minecraft.getInstance().getEntityModels().bakeLayer(ModelsamuraiHELM.LAYER_LOCATION)).Head,
+									new ModelsamuraiHELM(Minecraft.getInstance().getEntityModels().bakeLayer(ModelsamuraiHELM.LAYER_LOCATION)).Hat,
 									"hat", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "body",
 									new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_arm",
 									new ModelPart(Collections.emptyList(), Collections.emptyMap()), "left_arm",

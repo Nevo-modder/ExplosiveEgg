@@ -98,7 +98,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Lightning"
     },
     {
       "name": "FirechargeProjectileHitsBlock",
@@ -433,7 +434,8 @@
       "sortid": 33,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "master_of_the_five_magics_3"
+      "registry_name": "master_of_the_five_magics_3",
+      "path": "~/Lightning"
     },
     {
       "name": "MasterOfTheFiveMagics4",
@@ -574,7 +576,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Lightning"
     },
     {
       "name": "Lightnin",
@@ -787,6 +790,324 @@
         "eb": false,
         "ec": false
       }
+    },
+    {
+      "name": "LightningTimer",
+      "type": "procedure",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_timer",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Lightning"
+    },
+    {
+      "name": "LBar1DisplayOverlayIngame",
+      "type": "procedure",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_1_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Lightning"
+    },
+    {
+      "name": "LBar1",
+      "type": "overlay",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_1",
+      "path": "~/Lightning"
+    },
+    {
+      "name": "LBar2",
+      "type": "overlay",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_2",
+      "path": "~/Lightning"
+    },
+    {
+      "name": "LBar2DisplayOverlayIngame",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_2_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Lightning"
+    },
+    {
+      "name": "LBar3",
+      "type": "overlay",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_3",
+      "path": "~/Lightning"
+    },
+    {
+      "name": "LBar4",
+      "type": "overlay",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_4",
+      "path": "~/Lightning"
+    },
+    {
+      "name": "LBar3Display",
+      "type": "procedure",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_3_display",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Lightning"
+    },
+    {
+      "name": "LBar4Display",
+      "type": "procedure",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_4_display",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Lightning"
+    },
+    {
+      "name": "LBar5Display",
+      "type": "procedure",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_5_display",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Lightning"
+    },
+    {
+      "name": "LBar6Display",
+      "type": "procedure",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_6_display",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Lightning"
+    },
+    {
+      "name": "LBar7Display",
+      "type": "procedure",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_7_display",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Lightning"
+    },
+    {
+      "name": "LBar8Display",
+      "type": "procedure",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_8_display",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Lightning"
+    },
+    {
+      "name": "LBar9Display",
+      "type": "procedure",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_9_display",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Lightning"
+    },
+    {
+      "name": "LBar91Display",
+      "type": "procedure",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_91_display",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Lightning"
+    },
+    {
+      "name": "LBar92Display",
+      "type": "procedure",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_92_display",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Lightning"
+    },
+    {
+      "name": "LBar5",
+      "type": "overlay",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_5",
+      "path": "~/Lightning"
+    },
+    {
+      "name": "LBar6",
+      "type": "overlay",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_6",
+      "path": "~/Lightning"
+    },
+    {
+      "name": "LBar7",
+      "type": "overlay",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_7",
+      "path": "~/Lightning"
+    },
+    {
+      "name": "LBar8",
+      "type": "overlay",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_8",
+      "path": "~/Lightning"
+    },
+    {
+      "name": "LBar9",
+      "type": "overlay",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_9",
+      "path": "~/Lightning"
+    },
+    {
+      "name": "LBar10",
+      "type": "overlay",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_10",
+      "path": "~/Lightning"
+    },
+    {
+      "name": "LBar11",
+      "type": "overlay",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_11",
+      "path": "~/Lightning"
     }
   ],
   "variable_elements": [
@@ -861,6 +1182,12 @@
       "type": "logic",
       "scope": "map",
       "value": "false"
+    },
+    {
+      "name": "LTimeSec",
+      "type": "number",
+      "scope": "map",
+      "value": "-1.0"
     }
   ],
   "sound_elements": [
@@ -990,7 +1317,12 @@
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "Lightning",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "explosivegg",

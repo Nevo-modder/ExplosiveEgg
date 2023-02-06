@@ -42,7 +42,7 @@ public class KillsProcedure {
 		if (sourceentity == null)
 			return;
 		if (sourceentity instanceof Player) {
-			if (ExplosiveggModVariables.MapVariables.get(world).Kills < 2
+			if (ExplosiveggModVariables.MapVariables.get(world).Kills < 250
 					&& (sourceentity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY)
 							.getItem() == ExplosiveggModItems.HAT_HELMET.get()
 					&& (sourceentity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.INVISIBILITY) : false)) {
@@ -51,7 +51,7 @@ public class KillsProcedure {
 				if (sourceentity instanceof Player _player && !_player.level.isClientSide())
 					_player.displayClientMessage(new TextComponent(((250 - ExplosiveggModVariables.MapVariables.get(world).Kills) + " Kills left")),
 							(true));
-			} else if (ExplosiveggModVariables.MapVariables.get(world).Kills == 2
+			} else if (ExplosiveggModVariables.MapVariables.get(world).Kills == 250
 					&& (sourceentity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY)
 							.getItem() == ExplosiveggModItems.HAT_HELMET.get()
 					&& (sourceentity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.INVISIBILITY) : false)) {
