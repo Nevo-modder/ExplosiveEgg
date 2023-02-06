@@ -51,7 +51,7 @@ public class FBar6Overlay {
 			RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA,
 					GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
 			RenderSystem.setShaderColor(1, 1, 1, 1);
-			if (FBar6DisplayProcedure.execute(world, entity)) {
+			if (FBar6DisplayProcedure.execute(world)) {
 				RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/fbar6.png"));
 				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + 180, posY + 68, 0, 0, 32, 64, 32, 64);
 
