@@ -429,15 +429,6 @@
       }
     },
     {
-      "name": "MasterOfTheFiveMagics3",
-      "type": "overlay",
-      "sortid": 33,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "master_of_the_five_magics_3",
-      "path": "~/Lightning"
-    },
-    {
       "name": "MasterOfTheFiveMagics4",
       "type": "overlay",
       "sortid": 34,
@@ -1108,6 +1099,14 @@
       "locked_code": false,
       "registry_name": "l_bar_11",
       "path": "~/Lightning"
+    },
+    {
+      "name": "MasterMagics3",
+      "type": "overlay",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "master_magics_3"
     }
   ],
   "variable_elements": [

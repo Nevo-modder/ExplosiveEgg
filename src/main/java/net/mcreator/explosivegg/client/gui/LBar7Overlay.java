@@ -53,7 +53,7 @@ public class LBar7Overlay {
 			RenderSystem.setShaderColor(1, 1, 1, 1);
 			if (LBar7DisplayProcedure.execute(world)) {
 				RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/bar5.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + 171, posY + 68, 0, 0, 32, 64, 32, 64);
+				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + 153, posY + 68, 0, 0, 32, 64, 32, 64);
 
 			}
 			RenderSystem.depthMask(true);
