@@ -18,13 +18,13 @@ import com.mojang.blaze3d.vertex.PoseStack;
 // Made with Blockbench 4.6.4
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
-public class Modelring<T extends Entity> extends EntityModel<T> {
+public class Modelring22<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("explosivegg", "modelring"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("explosivegg", "modelring_22"), "main");
 	public final ModelPart Head;
 
-	public Modelring(ModelPart root) {
+	public Modelring22(ModelPart root) {
 		this.Head = root.getChild("Head");
 	}
 

@@ -77,7 +77,7 @@ public class ZombieSamuraiEntity extends Zombie {
 				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
 			}
 		});
-		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
+		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 0.3));
 		this.targetSelector.addGoal(3, new HurtByTargetGoal(this).setAlertOthers());
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(5, new FloatGoal(this));

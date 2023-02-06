@@ -2,7 +2,7 @@
   "_fv": 33,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Skeleton Pillager 2",
+    "mobName": "Skeleton Pillager",
     "mobLabel": "",
     "mobModelName": "ModelSkeletonPillager_1",
     "mobModelTexture": "skeletonpillager5.png",

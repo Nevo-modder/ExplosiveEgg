@@ -2,19 +2,15 @@
 package net.mcreator.explosivegg.client.renderer;
 
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer;
-import net.minecraft.client.renderer.entity.HumanoidMobRenderer;
+import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.client.model.geom.ModelLayers;
-import net.minecraft.client.model.HumanoidModel;
 
 import net.mcreator.explosivegg.entity.SkeletonEkoverEntity;
+import net.mcreator.explosivegg.client.model.ModelSkeletonEvoker13;
 
-public class SkeletonEkoverRenderer extends HumanoidMobRenderer<SkeletonEkoverEntity, HumanoidModel<SkeletonEkoverEntity>> {
+public class SkeletonEkoverRenderer extends MobRenderer<SkeletonEkoverEntity, ModelSkeletonEvoker13<SkeletonEkoverEntity>> {
 	public SkeletonEkoverRenderer(EntityRendererProvider.Context context) {
-		super(context, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER)), 0.5f);
-		this.addLayer(new HumanoidArmorLayer(this, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_INNER_ARMOR)),
-				new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_OUTER_ARMOR))));
+		super(context, new ModelSkeletonEvoker13(context.bakeLayer(ModelSkeletonEvoker13.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override

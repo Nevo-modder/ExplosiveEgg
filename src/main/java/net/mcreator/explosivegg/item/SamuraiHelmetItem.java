@@ -21,7 +21,7 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.explosivegg.client.model.Modelsamurai4;
+import net.mcreator.explosivegg.client.model.ModelsamuraiHELM;
 import net.mcreator.explosivegg.client.model.ModelBootsSamurai;
 import net.mcreator.explosivegg.client.model.ModelBodySamurai;
 
@@ -83,7 +83,8 @@ public abstract class SamuraiHelmetItem extends ArmorItem {
 				@Override
 				public HumanoidModel getArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
 					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(),
-							Map.of("head", new Modelsamurai4(Minecraft.getInstance().getEntityModels().bakeLayer(Modelsamurai4.LAYER_LOCATION)).Head,
+							Map.of("head",
+									new ModelsamuraiHELM(Minecraft.getInstance().getEntityModels().bakeLayer(ModelsamuraiHELM.LAYER_LOCATION)).Head,
 									"hat", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "body",
 									new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_arm",
 									new ModelPart(Collections.emptyList(), Collections.emptyMap()), "left_arm",
@@ -100,13 +101,13 @@ public abstract class SamuraiHelmetItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "explosivegg:textures/entities/samu.png";
+			return "explosivegg:textures/entities/samuraihelmet.png";
 		}
 	}
 
 	public static class Chestplate extends SamuraiHelmetItem {
 		public Chestplate() {
-			super(EquipmentSlot.CHEST, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
+			super(EquipmentSlot.CHEST, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT).fireResistant());
 		}
 
 		public void initializeClient(java.util.function.Consumer<net.minecraftforge.client.IItemRenderProperties> consumer) {
@@ -141,7 +142,7 @@ public abstract class SamuraiHelmetItem extends ArmorItem {
 
 	public static class Boots extends SamuraiHelmetItem {
 		public Boots() {
-			super(EquipmentSlot.FEET, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT));
+			super(EquipmentSlot.FEET, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT).fireResistant());
 		}
 
 		public void initializeClient(java.util.function.Consumer<net.minecraftforge.client.IItemRenderProperties> consumer) {

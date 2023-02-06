@@ -36,7 +36,6 @@ public class ExplosiveggModItems {
 	public static final RegistryObject<Item> SPIKED_BALL_MACE = REGISTRY.register("spiked_ball_mace", () -> new SpikedBallMaceItem());
 	public static final RegistryObject<Item> SKELETON_VILLAGER = REGISTRY.register("skeleton_villager_spawn_egg",
 			() -> new ForgeSpawnEggItem(ExplosiveggModEntities.SKELETON_VILLAGER, -1, -1, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
-	public static final RegistryObject<Item> HAT_HELMET = REGISTRY.register("hat_helmet", () -> new HatItem.Helmet());
 	public static final RegistryObject<Item> SAMURAI_HELMET_HELMET = REGISTRY.register("samurai_helmet_helmet", () -> new SamuraiHelmetItem.Helmet());
 	public static final RegistryObject<Item> SAMURAI_HELMET_CHESTPLATE = REGISTRY.register("samurai_helmet_chestplate",
 			() -> new SamuraiHelmetItem.Chestplate());
@@ -52,6 +51,7 @@ public class ExplosiveggModItems {
 	public static final RegistryObject<Item> SKELETON_PILLAGER_2 = REGISTRY.register("skeleton_pillager_2_spawn_egg",
 			() -> new ForgeSpawnEggItem(ExplosiveggModEntities.SKELETON_PILLAGER_2, -16751104, -1,
 					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> HAT_HELMET = REGISTRY.register("hat_helmet", () -> new HatItem.Helmet());
 
 	private static RegistryObject<Item> doubleBlock(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new DoubleHighBlockItem(block.get(), new Item.Properties().tab(tab)));

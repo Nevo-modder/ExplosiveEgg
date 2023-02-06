@@ -1,15 +1,15 @@
-// Made with Blockbench 4.4.3
-// Exported for Minecraft version 1.17 - 1.18 with Mojang mappings
+// Made with Blockbench 4.6.4
+// Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
 
-public class Modelsamurai4<T extends Entity> extends EntityModel<T> {
+public class ModelsamuraiHELM<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
-			new ResourceLocation("modid", "samurai4"), "main");
+			new ResourceLocation("modid", "samuraihelm"), "main");
 	private final ModelPart Head;
 
-	public Modelsamurai4(ModelPart root) {
+	public ModelsamuraiHELM(ModelPart root) {
 		this.Head = root.getChild("Head");
 	}
 
