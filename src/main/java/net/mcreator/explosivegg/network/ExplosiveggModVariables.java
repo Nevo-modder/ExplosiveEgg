@@ -159,6 +159,7 @@ public class ExplosiveggModVariables {
 		public boolean Minion = false;
 		public boolean MTime = false;
 		public double LTimeSec = -1.0;
+		public double FTimeSec = -1.0;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -179,6 +180,7 @@ public class ExplosiveggModVariables {
 			Minion = nbt.getBoolean("Minion");
 			MTime = nbt.getBoolean("MTime");
 			LTimeSec = nbt.getDouble("LTimeSec");
+			FTimeSec = nbt.getDouble("FTimeSec");
 		}
 
 		@Override
@@ -195,6 +197,7 @@ public class ExplosiveggModVariables {
 			nbt.putBoolean("Minion", Minion);
 			nbt.putBoolean("MTime", MTime);
 			nbt.putDouble("LTimeSec", LTimeSec);
+			nbt.putDouble("FTimeSec", FTimeSec);
 			return nbt;
 		}
 

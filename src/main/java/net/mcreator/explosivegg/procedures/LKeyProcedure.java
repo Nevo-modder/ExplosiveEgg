@@ -88,7 +88,7 @@ public class LKeyProcedure {
 				LightningTimerProcedure.execute(world);
 			} else {
 				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(new TextComponent("Can't use it right now, wait."), (true));
+					_player.displayClientMessage(new TextComponent("Can't use it right now, wait to the bar to be full."), (true));
 			}
 		}
 	}
