@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:leather_helmet"
+    },
+    "2": {
+      "item": "minecraft:leather_helmet"
+    },
+    "3": {
+      "item": "minecraft:leather_helmet"
+    },
+    "5": {
+      "item": "minecraft:leather_helmet"
+    }
+  },
+  "result": {
+    "item": "explosivegg:deleted_mod_element_boots",
+    "count": 1
+  }
+}

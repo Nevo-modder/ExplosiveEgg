@@ -1,0 +1,12 @@
+{
+  "_fv": 33,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "DOWN",
+    "keyBindingName": "Invis",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "GOnKeyPressed"
+    }
+  }
+}

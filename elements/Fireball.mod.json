@@ -1,0 +1,12 @@
+{
+  "_fv": 33,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "UP",
+    "keyBindingName": "Fireball",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "Bkey"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:skeleton_skull"
+    },
+    "title": {
+      "translate": "advancements.minion_adv.title"
+    },
+    "description": {
+      "translate": "advancements.minion_adv.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "minion_adv": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "explosivegg:fire_charge_adv"
+}

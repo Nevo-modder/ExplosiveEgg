@@ -1,0 +1,83 @@
+{
+  "skeletonpillagerlivingsound": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "explosivegg:skeletonpillager",
+        "stream": false
+      }
+    ]
+  },
+  "skeletonpillagerhurtsound": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "explosivegg:skeletonpillagerhurtsound",
+        "stream": false
+      }
+    ]
+  },
+  "skeletonsummon": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "explosivegg:skeletonsummon",
+        "stream": false
+      }
+    ]
+  },
+  "lightning": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "explosivegg:lightning",
+        "stream": false
+      }
+    ]
+  },
+  "disappear": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "explosivegg:disapper",
+        "stream": false
+      }
+    ]
+  },
+  "skeletonevokersound": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "explosivegg:skeletonevokerlivingsound",
+        "stream": false
+      }
+    ]
+  },
+  "skeletonevokerhurt": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "explosivegg:skeletonevokerhurt",
+        "stream": false
+      }
+    ]
+  },
+  "pillagersound": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "explosivegg:pillager",
+        "stream": false
+      }
+    ]
+  },
+  "hurt": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "explosivegg:hurt",
+        "stream": false
+      }
+    ]
+  }
+}

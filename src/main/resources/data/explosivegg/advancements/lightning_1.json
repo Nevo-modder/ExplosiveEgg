@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "explosivegg:lightning_item"
+    },
+    "title": {
+      "translate": "advancements.lightning_1.title"
+    },
+    "description": {
+      "translate": "advancements.lightning_1.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "lightning_1": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "explosivegg:fire_charge_adv"
+}

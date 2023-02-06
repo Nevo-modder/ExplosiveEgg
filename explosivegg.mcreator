@@ -1,0 +1,1014 @@
+{
+  "mod_elements": [
+    {
+      "name": "SkeletonPillager",
+      "type": "livingentity",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skeleton_vindicator"
+    },
+    {
+      "name": "Halberd",
+      "type": "tool",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "halberd"
+    },
+    {
+      "name": "SkeletonEkoverPlayerCollidesWithThisEntity",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skeleton_ekover_player_collides_with_this_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SkeletonEkover",
+      "type": "livingentity",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skeleton_ekover"
+    },
+    {
+      "name": "SkeletonEkoverEntityIsHurt",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skeleton_ekover_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Lightning",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FirechargeProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firecharge_projectile_hits_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Firecharge",
+      "type": "rangeditem",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firecharge"
+    },
+    {
+      "name": "SkeletonPillager1",
+      "type": "livingentity",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skeleton_pillager_1"
+    },
+    {
+      "name": "SpikedBallMace",
+      "type": "tool",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spiked_ball_mace"
+    },
+    {
+      "name": "SkeletonVillager",
+      "type": "livingentity",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skeleton_villager"
+    },
+    {
+      "name": "ArmorcoreArmorHelmetRecipe",
+      "type": "recipe",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "armorcore_armor_helmet_recipe"
+    },
+    {
+      "name": "ArmorcoreArmorBodyRecipe",
+      "type": "recipe",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "armorcore_armor_body_recipe"
+    },
+    {
+      "name": "ArmorcoreArmorLeggingsRecipe",
+      "type": "recipe",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "armorcore_armor_leggings_recipe"
+    },
+    {
+      "name": "ArmorcoreArmorBootsRecipe",
+      "type": "recipe",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "armorcore_armor_boots_recipe"
+    },
+    {
+      "name": "Hat",
+      "type": "armor",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hat",
+      "metadata": {
+        "eh": true,
+        "el": false,
+        "eb": false,
+        "ec": false
+      }
+    },
+    {
+      "name": "MasteroftheFiveMagicsDisplayOverlayIngame",
+      "type": "procedure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "masterofthe_five_magics_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MasteroftheFiveMagics",
+      "type": "overlay",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "masterofthe_five_magics"
+    },
+    {
+      "name": "GOnKeyPressed",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "g_on_key_pressed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bkey",
+      "type": "procedure",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bkey",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Fireball",
+      "type": "keybind",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fireball"
+    },
+    {
+      "name": "Invis",
+      "type": "keybind",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "invis"
+    },
+    {
+      "name": "MasterOftheFiveMagics2",
+      "type": "overlay",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "master_ofthe_five_magics_2"
+    },
+    {
+      "name": "Trade",
+      "type": "gui",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trade"
+    },
+    {
+      "name": "SkeletonVillagerRightClickedOnEntity",
+      "type": "procedure",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skeleton_villager_right_clicked_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Trade1",
+      "type": "procedure",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "trade_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SamuraiHelmet",
+      "type": "armor",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "samurai_helmet",
+      "metadata": {
+        "eh": true,
+        "el": false,
+        "eb": true,
+        "ec": true
+      }
+    },
+    {
+      "name": "Katana",
+      "type": "tool",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "katana"
+    },
+    {
+      "name": "Title",
+      "type": "procedure",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "title",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ZombieSamurai",
+      "type": "livingentity",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zombie_samurai"
+    },
+    {
+      "name": "Animation",
+      "type": "procedure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "animation",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MasterOfTheFiveMagics3",
+      "type": "overlay",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "master_of_the_five_magics_3"
+    },
+    {
+      "name": "MasterOfTheFiveMagics4",
+      "type": "overlay",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "master_of_the_five_magics_4"
+    },
+    {
+      "name": "FireChargeAdv",
+      "type": "achievement",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_charge_adv"
+    },
+    {
+      "name": "Master2",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "master_2",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Kills",
+      "type": "procedure",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kills",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SkeletonEkoverEntityDies",
+      "type": "procedure",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skeleton_ekover_entity_dies",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PlayeLeavesw",
+      "type": "procedure",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "playe_leavesw",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Lightning1",
+      "type": "achievement",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_1"
+    },
+    {
+      "name": "LightningItem",
+      "type": "item",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_item"
+    },
+    {
+      "name": "LKey",
+      "type": "procedure",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_key",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Lightnin",
+      "type": "keybind",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightnin"
+    },
+    {
+      "name": "Master3",
+      "type": "procedure",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "master_3",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MinionOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minion_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Minion",
+      "type": "livingentity",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minion"
+    },
+    {
+      "name": "Master4",
+      "type": "procedure",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "master_4",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MinionAdv",
+      "type": "achievement",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minion_adv"
+    },
+    {
+      "name": "MinionProcedure",
+      "type": "procedure",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minion_procedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MinionKey",
+      "type": "keybind",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minion_key"
+    },
+    {
+      "name": "BoneDoor",
+      "type": "block",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bone_door"
+    },
+    {
+      "name": "Village",
+      "type": "structure",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "village"
+    },
+    {
+      "name": "SkeletonBiome",
+      "type": "biome",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skeleton_biome"
+    },
+    {
+      "name": "VillageOnStructureInstanceGenerated",
+      "type": "procedure",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "village_on_structure_instance_generated",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "evokerattack",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "evokerattack2",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "ring",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "Time",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "Kills",
+      "type": "number",
+      "scope": "map",
+      "value": "0.0"
+    },
+    {
+      "name": "Fire",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "FireUse",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "Lightning",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "LightningUse",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "LTime",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "Minion",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "MTime",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    }
+  ],
+  "sound_elements": [
+    {
+      "name": "skeletonpillagerlivingsound",
+      "files": [
+        "skeletonpillager"
+      ],
+      "category": "master",
+      "subtitle": ""
+    },
+    {
+      "name": "skeletonpillagerhurtsound",
+      "files": [
+        "skeletonpillagerhurtsound"
+      ],
+      "category": "master",
+      "subtitle": ""
+    },
+    {
+      "name": "skeletonsummon",
+      "files": [
+        "skeletonsummon"
+      ],
+      "category": "master",
+      "subtitle": ""
+    },
+    {
+      "name": "lightning",
+      "files": [
+        "lightning"
+      ],
+      "category": "master",
+      "subtitle": ""
+    },
+    {
+      "name": "disappear",
+      "files": [
+        "disapper"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "skeletonevokersound",
+      "files": [
+        "skeletonevokerlivingsound"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "skeletonevokerhurt",
+      "files": [
+        "skeletonevokerhurt"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "pillagersound",
+      "files": [
+        "pillager"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "hurt",
+      "files": [
+        "hurt"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    }
+  ],
+  "language_map": {
+    "en_us": {
+      "item.explosivegg.samurai_helmet_chestplate": "Samurai Body",
+      "item.explosivegg.skeleton_vindicator_spawn_egg": "Skeleton Vindicator Spawn Egg",
+      "key.explosivegg.fireball": "Fireball",
+      "subtitles.skeletonpillagerhurtsound": "",
+      "subtitles.skeletonpillagerlivingsound": "",
+      "item.explosivegg.samurai_helmet_helmet": "Samurai Helmet ",
+      "subtitles.pillagersound": "",
+      "item.explosivegg.zombie_samurai_spawn_egg": "Zombie Samurai Spawn Egg",
+      "subtitles.hurt": "",
+      "item.explosivegg.hat_helmet": "Ring Of The Skeleton Evoker",
+      "item.explosivegg.hat_chestplate": "Hat Body",
+      "subtitles.disappear": "",
+      "key.explosivegg.invis": "Invis",
+      "entity.explosivegg.skeleton_vindicator": "Skeleton Vindicator",
+      "entity.explosivegg.skeleton_ekover": "Skeleton Ekover",
+      "item.explosivegg.skeleton_ekover_spawn_egg": "Skeleton Ekover Spawn Egg",
+      "item.explosivegg.minion_spawn_egg": "Minion Spawn Egg",
+      "subtitles.evokerattack": "",
+      "item.explosivegg.hat_boots": "Hat Boots",
+      "block.explosivegg.bone_door": "Bone Door",
+      "entity.explosivegg.zombie_samurai": "Zombie Samurai",
+      "entity.explosivegg.minion": "Minion",
+      "advancements.minion_adv.title": "Minion Ability Unlocked!",
+      "key.explosivegg.minion_key": "Minion Key",
+      "entity.explosivegg.skeleton_pillager_1": "Skeleton Pillager",
+      "item.explosivegg.halberd": "Halberd",
+      "key.explosivegg.lightnin": "Lightnin",
+      "item.explosivegg.hat_leggings": "Hat Leggings",
+      "advancements.lightning_1.descr": "You are able using lightning while Evoker\u0027s Ring on",
+      "subtitles.skeletonevokersound": "",
+      "item.explosivegg.spiked_ball_mace": "Spiked Ball Mace",
+      "item.explosivegg.lightning_item": "0",
+      "item.explosivegg.skeleton_villager_spawn_egg": "Skeleton Villager Spawn Egg",
+      "item.explosivegg.katana": "Katana",
+      "advancements.lightning_1.title": "Lightning Ability",
+      "advancements.minion_adv.descr": "You are able using the  Minion while Evoker\u0027s Ring on",
+      "item.explosivegg.samurai_helmet_leggings": "Samurai Helmet Leggings",
+      "subtitles.skeletonevokerhurt": "",
+      "biome.explosivegg.skeleton_biome": "Skeleton Biome",
+      "item.explosivegg.firecharge": "Firecharge",
+      "advancements.fire_charge_adv.title": "Fire Charge Ability",
+      "subtitles.skeletonsummon": "",
+      "item.explosivegg.samurai_helmet_boots": "Samurai Boots",
+      "subtitles.lightning": "",
+      "entity.explosivegg.skeleton_villager": "Skeleton Villager",
+      "item.explosivegg.skeleton_pillager_1_spawn_egg": "Skeleton Pillager Spawn Egg",
+      "advancements.fire_charge_adv.descr": "You are able using fire charge while Evoker\u0027s Ring on"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "explosivegg",
+    "modName": "explosivegg",
+    "version": "1.0.0",
+    "author": "Nevonis, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.16.5",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.explosivegg",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202200234517
+}

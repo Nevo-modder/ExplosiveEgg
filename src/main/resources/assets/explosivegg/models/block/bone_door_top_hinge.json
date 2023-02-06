@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_top_rh",
+  "textures": {
+    "bottom": "explosivegg:blocks/door_bottom2",
+    "top": "explosivegg:blocks/door_top"
+  }
+}

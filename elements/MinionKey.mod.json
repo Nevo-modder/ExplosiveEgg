@@ -1,0 +1,12 @@
+{
+  "_fv": 33,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "LEFT",
+    "keyBindingName": "Minion Key",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "MinionProcedure"
+    }
+  }
+}

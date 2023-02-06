@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:leather_helmet"
+    },
+    "2": {
+      "item": "minecraft:leather_helmet"
+    },
+    "3": {
+      "item": "minecraft:leather_helmet"
+    },
+    "4": {
+      "item": "minecraft:leather_helmet"
+    },
+    "5": {
+      "item": "minecraft:leather_helmet"
+    },
+    "6": {
+      "item": "minecraft:leather_helmet"
+    },
+    "7": {
+      "item": "minecraft:leather_helmet"
+    },
+    "8": {
+      "item": "minecraft:leather_helmet"
+    }
+  },
+  "result": {
+    "item": "explosivegg:deleted_mod_element_chestplate",
+    "count": 1
+  }
+}
