@@ -1,99 +1,61 @@
 package net.mcreator.explosivegg.procedures;
 
+import org.checkerframework.checker.units.qual.Time;
+
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.item.ItemStack;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.entity.projectile.FireballEntity;
-import net.minecraft.entity.SpawnReason;
-import net.minecraft.entity.MobEntity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ILivingEntityData;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.Entity;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.projectile.LargeFireball;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
 
-import net.mcreator.explosivegg.item.HatItem;
-import net.mcreator.explosivegg.ExplosiveggModVariables;
-import net.mcreator.explosivegg.ExplosiveggMod;
-
-import java.util.stream.Stream;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.AbstractMap;
+import net.mcreator.explosivegg.network.ExplosiveggModVariables;
+import net.mcreator.explosivegg.init.ExplosiveggModItems;
 
 public class BkeyProcedure {
-
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				ExplosiveggMod.LOGGER.warn("Failed to load dependency world for procedure Bkey!");
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		if (entity == null)
 			return;
-		}
-		if (dependencies.get("x") == null) {
-			if (!dependencies.containsKey("x"))
-				ExplosiveggMod.LOGGER.warn("Failed to load dependency x for procedure Bkey!");
-			return;
-		}
-		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				ExplosiveggMod.LOGGER.warn("Failed to load dependency y for procedure Bkey!");
-			return;
-		}
-		if (dependencies.get("z") == null) {
-			if (!dependencies.containsKey("z"))
-				ExplosiveggMod.LOGGER.warn("Failed to load dependency z for procedure Bkey!");
-			return;
-		}
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				ExplosiveggMod.LOGGER.warn("Failed to load dependency entity for procedure Bkey!");
-			return;
-		}
-		IWorld world = (IWorld) dependencies.get("world");
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		Entity entity = (Entity) dependencies.get("entity");
 		boolean Time = false;
-		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.HEAD) : ItemStack.EMPTY)
-				.getItem() == HatItem.helmet && ExplosiveggModVariables.MapVariables.get(world).Fire == true) {
+		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY)
+				.getItem() == ExplosiveggModItems.HAT_HELMET.get() && ExplosiveggModVariables.MapVariables.get(world).Fire == true) {
 			if (ExplosiveggModVariables.MapVariables.get(world).Time == false) {
-				if (world instanceof ServerWorld) {
-					Entity entityToSpawn = new FireballEntity(EntityType.FIREBALL, (World) world);
-					entityToSpawn.setLocationAndAngles(x, (y + 0.7), z, (float) 0, (float) 1);
-					entityToSpawn.setRenderYawOffset((float) 0);
-					entityToSpawn.setRotationYawHead((float) 0);
-					entityToSpawn.setMotion(0, 0, 0);
-					if (entityToSpawn instanceof MobEntity)
-						((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world, world.getDifficultyForLocation(entityToSpawn.getPosition()),
-								SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
-					world.addEntity(entityToSpawn);
+				if (world instanceof ServerLevel _level) {
+					Entity entityToSpawn = new LargeFireball(EntityType.FIREBALL, _level);
+					entityToSpawn.moveTo(x, (y + 0.7), z, 0, 1);
+					entityToSpawn.setYBodyRot(0);
+					entityToSpawn.setYHeadRot(0);
+					entityToSpawn.setDeltaMovement(0, 0, 0);
+					if (entityToSpawn instanceof Mob _mobToSpawn)
+						_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED,
+								null, null);
+					world.addFreshEntity(entityToSpawn);
 				}
 				{
-					double _setval = ((entity.getCapability(ExplosiveggModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-							.orElse(new ExplosiveggModVariables.PlayerVariables())).FireUse + 1);
+					double _setval = (entity.getCapability(ExplosiveggModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+							.orElse(new ExplosiveggModVariables.PlayerVariables())).FireUse + 1;
 					entity.getCapability(ExplosiveggModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.FireUse = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				ExplosiveggModVariables.MapVariables.get(world).Time = (true);
+				ExplosiveggModVariables.MapVariables.get(world).Time = true;
 				ExplosiveggModVariables.MapVariables.get(world).syncData(world);
-				TitleProcedure
-						.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("entity", entity))
-								.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
+				TitleProcedure.execute(world, entity);
 				new Object() {
 					private int ticks = 0;
 					private float waitTicks;
-					private IWorld world;
+					private LevelAccessor world;
 
-					public void start(IWorld world, int waitTicks) {
+					public void start(LevelAccessor world, int waitTicks) {
 						this.waitTicks = waitTicks;
 						MinecraftForge.EVENT_BUS.register(this);
 						this.world = world;
@@ -109,11 +71,11 @@ public class BkeyProcedure {
 					}
 
 					private void run() {
-						ExplosiveggModVariables.MapVariables.get(world).Time = (false);
+						ExplosiveggModVariables.MapVariables.get(world).Time = false;
 						ExplosiveggModVariables.MapVariables.get(world).syncData(world);
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
-				}.start(world, (int) 140);
+				}.start(world, 140);
 			}
 		}
 	}

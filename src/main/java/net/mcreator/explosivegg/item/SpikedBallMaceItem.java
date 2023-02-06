@@ -1,79 +1,61 @@
 
 package net.mcreator.explosivegg.item;
 
-import net.minecraftforge.registries.ObjectHolder;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.core.BlockPos;
 
-import net.minecraft.world.World;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.Item;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
-import net.minecraft.entity.ai.attributes.Attribute;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.block.BlockState;
-
-import net.mcreator.explosivegg.ExplosiveggModElements;
+import java.util.List;
 
 import com.google.common.collect.Multimap;
 import com.google.common.collect.ImmutableMultimap;
 
-@ExplosiveggModElements.ModElement.Tag
-public class SpikedBallMaceItem extends ExplosiveggModElements.ModElement {
-	@ObjectHolder("explosivegg:spiked_ball_mace")
-	public static final Item block = null;
-
-	public SpikedBallMaceItem(ExplosiveggModElements instance) {
-		super(instance, 11);
+public class SpikedBallMaceItem extends Item {
+	public SpikedBallMaceItem() {
+		super(new Item.Properties().tab(CreativeModeTab.TAB_TOOLS).durability(2200));
 	}
 
 	@Override
-	public void initElements() {
-		elements.items.add(() -> new ItemToolCustom() {
-		}.setRegistryName("spiked_ball_mace"));
+	public float getDestroySpeed(ItemStack itemstack, BlockState blockstate) {
+		return List.of().contains(blockstate.getBlock()) ? 4f : 1;
 	}
 
-	private static class ItemToolCustom extends Item {
-		protected ItemToolCustom() {
-			super(new Item.Properties().group(ItemGroup.TOOLS).maxDamage(2200));
-		}
+	@Override
+	public boolean mineBlock(ItemStack itemstack, Level world, BlockState blockstate, BlockPos pos, LivingEntity entity) {
+		itemstack.hurtAndBreak(1, entity, i -> i.broadcastBreakEvent(EquipmentSlot.MAINHAND));
+		return true;
+	}
 
-		@Override
-		public float getDestroySpeed(ItemStack itemstack, BlockState blockstate) {
-			return 1;
-		}
+	@Override
+	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
+		itemstack.hurtAndBreak(2, entity, i -> i.broadcastBreakEvent(EquipmentSlot.MAINHAND));
+		return true;
+	}
 
-		@Override
-		public boolean onBlockDestroyed(ItemStack stack, World worldIn, BlockState state, BlockPos pos, LivingEntity entityLiving) {
-			stack.damageItem(1, entityLiving, i -> i.sendBreakAnimation(EquipmentSlotType.MAINHAND));
-			return true;
-		}
+	@Override
+	public int getEnchantmentValue() {
+		return 2;
+	}
 
-		@Override
-		public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-			stack.damageItem(2, attacker, i -> i.sendBreakAnimation(EquipmentSlotType.MAINHAND));
-			return true;
+	@Override
+	public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(EquipmentSlot equipmentSlot) {
+		if (equipmentSlot == EquipmentSlot.MAINHAND) {
+			ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
+			builder.putAll(super.getDefaultAttributeModifiers(equipmentSlot));
+			builder.put(Attributes.ATTACK_DAMAGE,
+					new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Tool modifier", 9f, AttributeModifier.Operation.ADDITION));
+			builder.put(Attributes.ATTACK_SPEED,
+					new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Tool modifier", -3, AttributeModifier.Operation.ADDITION));
+			return builder.build();
 		}
-
-		@Override
-		public int getItemEnchantability() {
-			return 2;
-		}
-
-		@Override
-		public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlotType equipmentSlot) {
-			if (equipmentSlot == EquipmentSlotType.MAINHAND) {
-				ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
-				builder.putAll(super.getAttributeModifiers(equipmentSlot));
-				builder.put(Attributes.ATTACK_DAMAGE,
-						new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Tool modifier", 9f, AttributeModifier.Operation.ADDITION));
-				builder.put(Attributes.ATTACK_SPEED,
-						new AttributeModifier(ATTACK_SPEED_MODIFIER, "Tool modifier", -3, AttributeModifier.Operation.ADDITION));
-				return builder.build();
-			}
-			return super.getAttributeModifiers(equipmentSlot);
-		}
+		return super.getDefaultAttributeModifiers(equipmentSlot);
 	}
 }

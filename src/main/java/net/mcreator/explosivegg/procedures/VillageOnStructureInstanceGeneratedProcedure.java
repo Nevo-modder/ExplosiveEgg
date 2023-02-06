@@ -1,111 +1,75 @@
 package net.mcreator.explosivegg.procedures;
 
-import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.entity.SpawnReason;
-import net.minecraft.entity.MobEntity;
-import net.minecraft.entity.ILivingEntityData;
-import net.minecraft.entity.Entity;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
 
+import net.mcreator.explosivegg.init.ExplosiveggModEntities;
 import net.mcreator.explosivegg.entity.SkeletonVillagerEntity;
-import net.mcreator.explosivegg.ExplosiveggMod;
-
-import java.util.Map;
 
 public class VillageOnStructureInstanceGeneratedProcedure {
-
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				ExplosiveggMod.LOGGER.warn("Failed to load dependency world for procedure VillageOnStructureInstanceGenerated!");
-			return;
+	public static void execute(LevelAccessor world, double x, double y, double z) {
+		if (world instanceof ServerLevel _level) {
+			Entity entityToSpawn = new SkeletonVillagerEntity(ExplosiveggModEntities.SKELETON_VILLAGER.get(), _level);
+			entityToSpawn.moveTo(x, y, z, 0, 0);
+			entityToSpawn.setYBodyRot(0);
+			entityToSpawn.setYHeadRot(0);
+			entityToSpawn.setDeltaMovement(0, 0, 0);
+			if (entityToSpawn instanceof Mob _mobToSpawn)
+				_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+			world.addFreshEntity(entityToSpawn);
 		}
-		if (dependencies.get("x") == null) {
-			if (!dependencies.containsKey("x"))
-				ExplosiveggMod.LOGGER.warn("Failed to load dependency x for procedure VillageOnStructureInstanceGenerated!");
-			return;
+		if (world instanceof ServerLevel _level) {
+			Entity entityToSpawn = new SkeletonVillagerEntity(ExplosiveggModEntities.SKELETON_VILLAGER.get(), _level);
+			entityToSpawn.moveTo(x, y, z, 0, 0);
+			entityToSpawn.setYBodyRot(0);
+			entityToSpawn.setYHeadRot(0);
+			entityToSpawn.setDeltaMovement(0, 0, 0);
+			if (entityToSpawn instanceof Mob _mobToSpawn)
+				_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+			world.addFreshEntity(entityToSpawn);
 		}
-		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				ExplosiveggMod.LOGGER.warn("Failed to load dependency y for procedure VillageOnStructureInstanceGenerated!");
-			return;
+		if (world instanceof ServerLevel _level) {
+			Entity entityToSpawn = new SkeletonVillagerEntity(ExplosiveggModEntities.SKELETON_VILLAGER.get(), _level);
+			entityToSpawn.moveTo(x, y, z, 0, 0);
+			entityToSpawn.setYBodyRot(0);
+			entityToSpawn.setYHeadRot(0);
+			entityToSpawn.setDeltaMovement(0, 0, 0);
+			if (entityToSpawn instanceof Mob _mobToSpawn)
+				_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+			world.addFreshEntity(entityToSpawn);
 		}
-		if (dependencies.get("z") == null) {
-			if (!dependencies.containsKey("z"))
-				ExplosiveggMod.LOGGER.warn("Failed to load dependency z for procedure VillageOnStructureInstanceGenerated!");
-			return;
+		if (world instanceof ServerLevel _level) {
+			Entity entityToSpawn = new SkeletonVillagerEntity(ExplosiveggModEntities.SKELETON_VILLAGER.get(), _level);
+			entityToSpawn.moveTo(x, y, z, 0, 0);
+			entityToSpawn.setYBodyRot(0);
+			entityToSpawn.setYHeadRot(0);
+			entityToSpawn.setDeltaMovement(0, 0, 0);
+			if (entityToSpawn instanceof Mob _mobToSpawn)
+				_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+			world.addFreshEntity(entityToSpawn);
 		}
-		IWorld world = (IWorld) dependencies.get("world");
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		if (world instanceof ServerWorld) {
-			Entity entityToSpawn = new SkeletonVillagerEntity.CustomEntity(SkeletonVillagerEntity.entity, (World) world);
-			entityToSpawn.setLocationAndAngles(x, y, z, (float) 0, (float) 0);
-			entityToSpawn.setRenderYawOffset((float) 0);
-			entityToSpawn.setRotationYawHead((float) 0);
-			entityToSpawn.setMotion(0, 0, 0);
-			if (entityToSpawn instanceof MobEntity)
-				((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world, world.getDifficultyForLocation(entityToSpawn.getPosition()),
-						SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
-			world.addEntity(entityToSpawn);
+		if (world instanceof ServerLevel _level) {
+			Entity entityToSpawn = new SkeletonVillagerEntity(ExplosiveggModEntities.SKELETON_VILLAGER.get(), _level);
+			entityToSpawn.moveTo(x, y, z, 0, 0);
+			entityToSpawn.setYBodyRot(0);
+			entityToSpawn.setYHeadRot(0);
+			entityToSpawn.setDeltaMovement(0, 0, 0);
+			if (entityToSpawn instanceof Mob _mobToSpawn)
+				_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+			world.addFreshEntity(entityToSpawn);
 		}
-		if (world instanceof ServerWorld) {
-			Entity entityToSpawn = new SkeletonVillagerEntity.CustomEntity(SkeletonVillagerEntity.entity, (World) world);
-			entityToSpawn.setLocationAndAngles(x, y, z, (float) 0, (float) 0);
-			entityToSpawn.setRenderYawOffset((float) 0);
-			entityToSpawn.setRotationYawHead((float) 0);
-			entityToSpawn.setMotion(0, 0, 0);
-			if (entityToSpawn instanceof MobEntity)
-				((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world, world.getDifficultyForLocation(entityToSpawn.getPosition()),
-						SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
-			world.addEntity(entityToSpawn);
-		}
-		if (world instanceof ServerWorld) {
-			Entity entityToSpawn = new SkeletonVillagerEntity.CustomEntity(SkeletonVillagerEntity.entity, (World) world);
-			entityToSpawn.setLocationAndAngles(x, y, z, (float) 0, (float) 0);
-			entityToSpawn.setRenderYawOffset((float) 0);
-			entityToSpawn.setRotationYawHead((float) 0);
-			entityToSpawn.setMotion(0, 0, 0);
-			if (entityToSpawn instanceof MobEntity)
-				((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world, world.getDifficultyForLocation(entityToSpawn.getPosition()),
-						SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
-			world.addEntity(entityToSpawn);
-		}
-		if (world instanceof ServerWorld) {
-			Entity entityToSpawn = new SkeletonVillagerEntity.CustomEntity(SkeletonVillagerEntity.entity, (World) world);
-			entityToSpawn.setLocationAndAngles(x, y, z, (float) 0, (float) 0);
-			entityToSpawn.setRenderYawOffset((float) 0);
-			entityToSpawn.setRotationYawHead((float) 0);
-			entityToSpawn.setMotion(0, 0, 0);
-			if (entityToSpawn instanceof MobEntity)
-				((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world, world.getDifficultyForLocation(entityToSpawn.getPosition()),
-						SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
-			world.addEntity(entityToSpawn);
-		}
-		if (world instanceof ServerWorld) {
-			Entity entityToSpawn = new SkeletonVillagerEntity.CustomEntity(SkeletonVillagerEntity.entity, (World) world);
-			entityToSpawn.setLocationAndAngles(x, y, z, (float) 0, (float) 0);
-			entityToSpawn.setRenderYawOffset((float) 0);
-			entityToSpawn.setRotationYawHead((float) 0);
-			entityToSpawn.setMotion(0, 0, 0);
-			if (entityToSpawn instanceof MobEntity)
-				((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world, world.getDifficultyForLocation(entityToSpawn.getPosition()),
-						SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
-			world.addEntity(entityToSpawn);
-		}
-		if (world instanceof ServerWorld) {
-			Entity entityToSpawn = new SkeletonVillagerEntity.CustomEntity(SkeletonVillagerEntity.entity, (World) world);
-			entityToSpawn.setLocationAndAngles(x, y, z, (float) 0, (float) 0);
-			entityToSpawn.setRenderYawOffset((float) 0);
-			entityToSpawn.setRotationYawHead((float) 0);
-			entityToSpawn.setMotion(0, 0, 0);
-			if (entityToSpawn instanceof MobEntity)
-				((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world, world.getDifficultyForLocation(entityToSpawn.getPosition()),
-						SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
-			world.addEntity(entityToSpawn);
+		if (world instanceof ServerLevel _level) {
+			Entity entityToSpawn = new SkeletonVillagerEntity(ExplosiveggModEntities.SKELETON_VILLAGER.get(), _level);
+			entityToSpawn.moveTo(x, y, z, 0, 0);
+			entityToSpawn.setYBodyRot(0);
+			entityToSpawn.setYHeadRot(0);
+			entityToSpawn.setDeltaMovement(0, 0, 0);
+			if (entityToSpawn instanceof Mob _mobToSpawn)
+				_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+			world.addFreshEntity(entityToSpawn);
 		}
 	}
 }

@@ -1,86 +1,54 @@
 package net.mcreator.explosivegg.procedures;
 
+import org.checkerframework.checker.units.qual.Time;
+
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.item.ItemStack;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.SpawnReason;
-import net.minecraft.entity.MobEntity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ILivingEntityData;
-import net.minecraft.entity.Entity;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.network.chat.TextComponent;
 
-import net.mcreator.explosivegg.item.HatItem;
+import net.mcreator.explosivegg.network.ExplosiveggModVariables;
+import net.mcreator.explosivegg.init.ExplosiveggModItems;
+import net.mcreator.explosivegg.init.ExplosiveggModEntities;
 import net.mcreator.explosivegg.entity.MinionEntity;
-import net.mcreator.explosivegg.ExplosiveggModVariables;
-import net.mcreator.explosivegg.ExplosiveggMod;
-
-import java.util.Map;
 
 public class MinionProcedureProcedure {
-
-	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				ExplosiveggMod.LOGGER.warn("Failed to load dependency world for procedure MinionProcedure!");
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		if (entity == null)
 			return;
-		}
-		if (dependencies.get("x") == null) {
-			if (!dependencies.containsKey("x"))
-				ExplosiveggMod.LOGGER.warn("Failed to load dependency x for procedure MinionProcedure!");
-			return;
-		}
-		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				ExplosiveggMod.LOGGER.warn("Failed to load dependency y for procedure MinionProcedure!");
-			return;
-		}
-		if (dependencies.get("z") == null) {
-			if (!dependencies.containsKey("z"))
-				ExplosiveggMod.LOGGER.warn("Failed to load dependency z for procedure MinionProcedure!");
-			return;
-		}
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				ExplosiveggMod.LOGGER.warn("Failed to load dependency entity for procedure MinionProcedure!");
-			return;
-		}
-		IWorld world = (IWorld) dependencies.get("world");
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		Entity entity = (Entity) dependencies.get("entity");
 		boolean Time = false;
-		if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.HEAD) : ItemStack.EMPTY)
-				.getItem() == HatItem.helmet && ExplosiveggModVariables.MapVariables.get(world).Minion == true) {
+		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY)
+				.getItem() == ExplosiveggModItems.HAT_HELMET.get() && ExplosiveggModVariables.MapVariables.get(world).Minion == true) {
 			if (ExplosiveggModVariables.MapVariables.get(world).MTime == false) {
-				if (world instanceof ServerWorld) {
-					Entity entityToSpawn = new MinionEntity.CustomEntity(MinionEntity.entity, (World) world);
-					entityToSpawn.setLocationAndAngles(x, y, z, (float) 0, (float) 0);
-					entityToSpawn.setRenderYawOffset((float) 0);
-					entityToSpawn.setRotationYawHead((float) 0);
-					entityToSpawn.setMotion(0, 0, 0);
-					if (entityToSpawn instanceof MobEntity)
-						((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world, world.getDifficultyForLocation(entityToSpawn.getPosition()),
-								SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
-					world.addEntity(entityToSpawn);
+				if (world instanceof ServerLevel _level) {
+					Entity entityToSpawn = new MinionEntity(ExplosiveggModEntities.MINION.get(), _level);
+					entityToSpawn.moveTo(x, y, z, 0, 0);
+					entityToSpawn.setYBodyRot(0);
+					entityToSpawn.setYHeadRot(0);
+					entityToSpawn.setDeltaMovement(0, 0, 0);
+					if (entityToSpawn instanceof Mob _mobToSpawn)
+						_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED,
+								null, null);
+					world.addFreshEntity(entityToSpawn);
 				}
-				ExplosiveggModVariables.MapVariables.get(world).MTime = (true);
+				ExplosiveggModVariables.MapVariables.get(world).MTime = true;
 				ExplosiveggModVariables.MapVariables.get(world).syncData(world);
 				new Object() {
 					private int ticks = 0;
 					private float waitTicks;
-					private IWorld world;
+					private LevelAccessor world;
 
-					public void start(IWorld world, int waitTicks) {
+					public void start(LevelAccessor world, int waitTicks) {
 						this.waitTicks = waitTicks;
 						MinecraftForge.EVENT_BUS.register(this);
 						this.world = world;
@@ -96,15 +64,14 @@ public class MinionProcedureProcedure {
 					}
 
 					private void run() {
-						ExplosiveggModVariables.MapVariables.get(world).MTime = (false);
+						ExplosiveggModVariables.MapVariables.get(world).MTime = false;
 						ExplosiveggModVariables.MapVariables.get(world).syncData(world);
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
-				}.start(world, (int) 800);
+				}.start(world, 800);
 			} else {
-				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Can't use it right now, wait."), (true));
-				}
+				if (entity instanceof Player _player && !_player.level.isClientSide())
+					_player.displayClientMessage(new TextComponent("Can't use it right now, wait."), (true));
 			}
 		}
 	}

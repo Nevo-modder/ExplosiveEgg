@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Skeleton Vindicator",
     "mobLabel": "",
-    "mobModelName": "ModelSkeletonPillager3",
+    "mobModelName": "ModelSkeletonVindicator3",
     "mobModelTexture": "skeletonpillager1.png",
     "mobModelGlowTexture": "",
     "modelWidth": 1.6,

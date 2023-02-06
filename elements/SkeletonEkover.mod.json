@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Skeleton Ekover",
     "mobLabel": "",
-    "mobModelName": "ModelSkeletonEvoker",
+    "mobModelName": "Biped",
     "mobModelTexture": "skeletonevoker.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,
