@@ -631,7 +631,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Minion"
     },
     {
       "name": "Minion",
@@ -700,7 +701,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Minion"
     },
     {
       "name": "MinionKey",
@@ -1498,53 +1500,54 @@
   ],
   "language_map": {
     "en_us": {
-      "item.explosivegg.samurai_helmet_chestplate": "Samurai Body",
-      "item.explosivegg.skeleton_vindicator_spawn_egg": "Skeleton Vindicator Spawn Egg",
-      "item.explosivegg.samurai_helmet_helmet": "Samurai Helmet ",
-      "key.explosivegg.fireball": "Fireball",
       "subtitles.skeletonpillagerhurtsound": "",
-      "subtitles.skeletonpillagerlivingsound": "",
-      "subtitles.pillagersound": "",
+      "key.explosivegg.fireball": "Fireball",
+      "item.explosivegg.samurai_helmet_helmet": "Samurai Helmet ",
       "item.explosivegg.zombie_samurai_spawn_egg": "Zombie Samurai Spawn Egg",
-      "subtitles.hurt": "",
       "item.explosivegg.hat_helmet": "Skeleton Evoker Ring",
-      "item.explosivegg.hat_chestplate": "Hat Body",
       "key.explosivegg.invis": "Invis",
-      "subtitles.disappear": "",
       "entity.explosivegg.skeleton_vindicator": "Skeleton Vindicator",
-      "item.explosivegg.skeleton_ekover_spawn_egg": "Skeleton Ekover Spawn Egg",
       "item.explosivegg.minion_spawn_egg": "Minion Spawn Egg",
-      "entity.explosivegg.skeleton_ekover": "Skeleton Ekover",
-      "item.explosivegg.skeleton_pillager_2_spawn_egg": "Skeleton Pillager Spawn Egg",
+      "item.explosivegg.skeleton_ekover_spawn_egg": "Skeleton Ekover Spawn Egg",
       "subtitles.evokerattack": "",
-      "item.explosivegg.hat_boots": "Hat Boots",
-      "block.explosivegg.bone_door": "Bone Door",
       "entity.explosivegg.minion": "Minion",
-      "entity.explosivegg.zombie_samurai": "Zombie Samurai",
       "advancements.minion_adv.title": "Minion Ability Unlocked!",
       "key.explosivegg.minion_key": "Minion Key",
       "entity.explosivegg.skeleton_pillager_2": "Skeleton Pillager",
-      "item.explosivegg.halberd": "Halberd",
-      "key.explosivegg.lightnin": "Lightnin",
       "item.explosivegg.hat_leggings": "Hat Leggings",
       "advancements.lightning_1.descr": "You are able using lightning while Evoker\u0027s Ring on",
-      "subtitles.skeletonevokersound": "",
       "item.explosivegg.spiked_ball_mace": "Spiked Ball Mace",
-      "item.explosivegg.lightning_item": "0",
-      "item.explosivegg.skeleton_villager_spawn_egg": "Skeleton Villager Spawn Egg",
       "item.explosivegg.katana": "Katana",
-      "advancements.lightning_1.title": "Lightning Ability",
-      "advancements.minion_adv.descr": "You are able using the  Minion while Evoker\u0027s Ring on",
+      "item.explosivegg.skeleton_villager_spawn_egg": "Skeleton Villager Spawn Egg",
       "item.explosivegg.samurai_helmet_leggings": "Samurai Helmet Leggings",
-      "subtitles.skeletonevokerhurt": "",
-      "biome.explosivegg.skeleton_biome": "Skeleton Biome",
       "item.explosivegg.firecharge": "Firecharge",
-      "advancements.fire_charge_adv.title": "Fire Charge Ability",
       "subtitles.skeletonsummon": "",
       "item.explosivegg.samurai_helmet_boots": "Samurai Boots",
       "entity.explosivegg.skeleton_villager": "Skeleton Villager",
-      "subtitles.lightning": "",
-      "advancements.fire_charge_adv.descr": "You are able using fire charge while Evoker\u0027s Ring on"
+      "advancements.fire_charge_adv.descr": "You are able using fire charge while Evoker\u0027s Ring on",
+      "item.explosivegg.samurai_helmet_chestplate": "Samurai Body",
+      "item.explosivegg.skeleton_vindicator_spawn_egg": "Skeleton Vindicator Spawn Egg",
+      "subtitles.skeletonpillagerlivingsound": "",
+      "subtitles.pillagersound": "",
+      "item.explosivegg.wand": "Wand",
+      "subtitles.hurt": "",
+      "item.explosivegg.hat_chestplate": "Hat Body",
+      "subtitles.disappear": "",
+      "entity.explosivegg.skeleton_ekover": "Skeleton Ekover",
+      "item.explosivegg.skeleton_pillager_2_spawn_egg": "Skeleton Pillager Spawn Egg",
+      "item.explosivegg.hat_boots": "Hat Boots",
+      "block.explosivegg.bone_door": "Bone Door",
+      "entity.explosivegg.zombie_samurai": "Zombie Samurai",
+      "item.explosivegg.halberd": "Halberd",
+      "key.explosivegg.lightnin": "Lightnin",
+      "subtitles.skeletonevokersound": "",
+      "item.explosivegg.lightning_item": "0",
+      "advancements.lightning_1.title": "Lightning Ability",
+      "advancements.minion_adv.descr": "You are able using the  Minion while Evoker\u0027s Ring on",
+      "subtitles.skeletonevokerhurt": "",
+      "biome.explosivegg.skeleton_biome": "Skeleton Biome",
+      "advancements.fire_charge_adv.title": "Fire Charge Ability",
+      "subtitles.lightning": ""
     }
   },
   "foldersRoot": {

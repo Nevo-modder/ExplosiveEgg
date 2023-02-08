@@ -1,5 +1,5 @@
 {
-  "_fv": 34,
+  "_fv": 33,
   "_type": "biome",
   "definition": {
     "name": "Skeleton Biome",
@@ -34,6 +34,7 @@
       "value": "EXPLOSION_NORMAL"
     },
     "particlesProbability": 0.5,
+    "biomeCategory": "NONE",
     "rainingPossibility": 0.5,
     "temperature": 0.5,
     "baseHeight": 0.0,
@@ -42,6 +43,7 @@
     "spawnBiomeNether": false,
     "spawnInCaves": false,
     "biomeWeight": 5,
+    "biomeDictionaryTypes": [],
     "grassPerChunk": 4,
     "seagrassPerChunk": 0,
     "flowersPerChunk": 4,

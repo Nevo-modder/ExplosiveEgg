@@ -9,16 +9,9 @@ import net.minecraft.client.model.VillagerModel;
 
 import net.mcreator.explosivegg.entity.SkeletonVillagerEntity;
 
-import com.mojang.blaze3d.vertex.PoseStack;
-
 public class SkeletonVillagerRenderer extends MobRenderer<SkeletonVillagerEntity, VillagerModel<SkeletonVillagerEntity>> {
 	public SkeletonVillagerRenderer(EntityRendererProvider.Context context) {
 		super(context, new VillagerModel(context.bakeLayer(ModelLayers.VILLAGER)), 0.5f);
-	}
-
-	@Override
-	protected void scale(SkeletonVillagerEntity villager, PoseStack poseStack, float f) {
-		poseStack.scale(0.9375f, 0.9375f, 0.9375f);
 	}
 
 	@Override

@@ -58,4 +58,7 @@ public class SkeletonBiomeBiome {
 				.downfall(0.5f).specialEffects(effects).mobSpawnSettings(mobSpawnInfo.build()).generationSettings(biomeGenerationSettings.build())
 				.build();
 	}
+
+	public static void init() {
+	}
 }
