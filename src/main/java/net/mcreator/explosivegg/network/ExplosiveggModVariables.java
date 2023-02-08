@@ -158,7 +158,7 @@ public class ExplosiveggModVariables {
 		public boolean LTime = false;
 		public boolean Minion = false;
 		public boolean MTime = false;
-		public double LTimeSec = -1.0;
+		public double LTimeSec = 0.0;
 		public double FTimeSec = -1.0;
 
 		public static MapVariables load(CompoundTag tag) {

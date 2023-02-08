@@ -69,7 +69,7 @@ public class LKeyProcedure {
 					if (entity instanceof Player _player && !_player.level.isClientSide())
 						_player.displayClientMessage(
 								new TextComponent(
-										(ExplosiveggModVariables.MapVariables.get(world).LightningUse + "Uses left to get the next ability!")),
+										((80 - ExplosiveggModVariables.MapVariables.get(world).LightningUse) + "Uses left to get the next ability!")),
 								(true));
 				}
 				if (ExplosiveggModVariables.MapVariables.get(world).LightningUse == 80) {

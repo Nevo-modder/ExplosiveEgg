@@ -631,7 +631,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Minion"
     },
     {
       "name": "Minion",
@@ -700,7 +701,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Minion"
     },
     {
       "name": "MinionKey",
@@ -811,6 +813,10 @@
       "metadata": {
         "return_type": "logic",
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "world",
             "type": "world"
@@ -1302,6 +1308,26 @@
         ]
       },
       "path": "~/Fireball"
+    },
+    {
+      "name": "PlayerEntersWorld",
+      "type": "procedure",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_enters_world",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1381,7 +1407,7 @@
       "name": "LTimeSec",
       "type": "number",
       "scope": "map",
-      "value": "-1.0"
+      "value": "0.0"
     },
     {
       "name": "FTimeSec",
@@ -1524,6 +1550,10 @@
       },
       {
         "name": "Fireball",
+        "children": []
+      },
+      {
+        "name": "Minion",
         "children": []
       }
     ]

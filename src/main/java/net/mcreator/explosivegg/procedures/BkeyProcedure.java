@@ -51,9 +51,9 @@ public class BkeyProcedure {
 				}
 				ExplosiveggModVariables.MapVariables.get(world).FTimeSec = 0;
 				ExplosiveggModVariables.MapVariables.get(world).syncData(world);
+				TitleProcedure.execute(world, entity);
 				ExplosiveggModVariables.MapVariables.get(world).Time = true;
 				ExplosiveggModVariables.MapVariables.get(world).syncData(world);
-				TitleProcedure.execute(world, entity);
 				new Object() {
 					private int ticks = 0;
 					private float waitTicks;
@@ -79,7 +79,7 @@ public class BkeyProcedure {
 						ExplosiveggModVariables.MapVariables.get(world).syncData(world);
 						MinecraftForge.EVENT_BUS.unregister(this);
 					}
-				}.start(world, 140);
+				}.start(world, 120);
 			} else {
 				if (entity instanceof Player _player && !_player.level.isClientSide())
 					_player.displayClientMessage(new TextComponent("Can't use it right now, wait to the bar to be full."), (true));
