@@ -14,6 +14,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.DoubleHighBlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 
+import net.mcreator.explosivegg.item.WandItem;
 import net.mcreator.explosivegg.item.SpikedBallMaceItem;
 import net.mcreator.explosivegg.item.SamuraiHelmetItem;
 import net.mcreator.explosivegg.item.LightningItemItem;
@@ -52,6 +53,7 @@ public class ExplosiveggModItems {
 			() -> new ForgeSpawnEggItem(ExplosiveggModEntities.SKELETON_PILLAGER_2, -16751104, -1,
 					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> HAT_HELMET = REGISTRY.register("hat_helmet", () -> new HatItem.Helmet());
+	public static final RegistryObject<Item> WAND = REGISTRY.register("wand", () -> new WandItem());
 
 	private static RegistryObject<Item> doubleBlock(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new DoubleHighBlockItem(block.get(), new Item.Properties().tab(tab)));

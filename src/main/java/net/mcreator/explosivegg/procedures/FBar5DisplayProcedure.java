@@ -1,8 +1,8 @@
 package net.mcreator.explosivegg.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.explosivegg.network.ExplosiveggModVariables;
+import javax.annotation.Nullable;
 
 public class FBar5DisplayProcedure {
 	public static boolean execute(LevelAccessor world) {
