@@ -1115,6 +1115,199 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "wand"
+    },
+    {
+      "name": "FBar5Display",
+      "type": "procedure",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "f_bar_5_display",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fireball"
+    },
+    {
+      "name": "FBar4Display",
+      "type": "procedure",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "f_bar_4_display",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fireball"
+    },
+    {
+      "name": "FBar6Display",
+      "type": "procedure",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "f_bar_6_display",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fireball"
+    },
+    {
+      "name": "FBar3Display",
+      "type": "procedure",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "f_bar_3_display",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fireball"
+    },
+    {
+      "name": "FBar7Display",
+      "type": "procedure",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "f_bar_7_display",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fireball"
+    },
+    {
+      "name": "FBar6",
+      "type": "overlay",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "f_bar_6",
+      "path": "~/Fireball"
+    },
+    {
+      "name": "FBar5",
+      "type": "overlay",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "f_bar_5",
+      "path": "~/Fireball"
+    },
+    {
+      "name": "FBar2Display",
+      "type": "procedure",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "f_bar_2_display",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fireball"
+    },
+    {
+      "name": "FBar1Display",
+      "type": "procedure",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "f_bar_1_display",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Fireball"
+    },
+    {
+      "name": "FBar7",
+      "type": "overlay",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "f_bar_7",
+      "path": "~/Fireball"
+    },
+    {
+      "name": "FBar2",
+      "type": "overlay",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "f_bar_2",
+      "path": "~/Fireball"
+    },
+    {
+      "name": "FBar1",
+      "type": "overlay",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "f_bar_1",
+      "path": "~/Fireball"
+    },
+    {
+      "name": "FBar4",
+      "type": "overlay",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "f_bar_4",
+      "path": "~/Fireball"
+    },
+    {
+      "name": "FBar3",
+      "type": "overlay",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "f_bar_3",
+      "path": "~/Fireball"
     }
   ],
   "variable_elements": [
@@ -1192,6 +1385,12 @@
     },
     {
       "name": "LTimeSec",
+      "type": "number",
+      "scope": "map",
+      "value": "-1.0"
+    },
+    {
+      "name": "FTimeSec",
       "type": "number",
       "scope": "map",
       "value": "-1.0"
@@ -1329,6 +1528,10 @@
       {
         "name": "Lightning",
         "children": []
+      },
+      {
+        "name": "Fireball",
+        "children": []
       }
     ]
   },
@@ -1350,5 +1553,5 @@
     "modElementsPackage": "net.mcreator.explosivegg",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202200348217
+  "mcreatorVersion": 202200234517
 }

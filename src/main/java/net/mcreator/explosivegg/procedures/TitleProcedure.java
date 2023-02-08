@@ -1,21 +1,8 @@
 package net.mcreator.explosivegg.procedures;
 
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.advancements.AdvancementProgress;
-import net.minecraft.advancements.Advancement;
-
-import net.mcreator.explosivegg.network.ExplosiveggModVariables;
-
-import java.util.Iterator;
+import javax.annotation.Nullable;
 
 public class TitleProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
@@ -42,8 +29,6 @@ public class TitleProcedure {
 			}
 
 			private void run() {
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(new TextComponent("6s To Fire Again"), (true));
 				new Object() {
 					private int ticks = 0;
 					private float waitTicks;
@@ -65,8 +50,6 @@ public class TitleProcedure {
 					}
 
 					private void run() {
-						if (entity instanceof Player _player && !_player.level.isClientSide())
-							_player.displayClientMessage(new TextComponent("5s To Fire Again"), (true));
 						new Object() {
 							private int ticks = 0;
 							private float waitTicks;
@@ -88,8 +71,6 @@ public class TitleProcedure {
 							}
 
 							private void run() {
-								if (entity instanceof Player _player && !_player.level.isClientSide())
-									_player.displayClientMessage(new TextComponent("4s To Fire Again"), (true));
 								new Object() {
 									private int ticks = 0;
 									private float waitTicks;
@@ -111,8 +92,6 @@ public class TitleProcedure {
 									}
 
 									private void run() {
-										if (entity instanceof Player _player && !_player.level.isClientSide())
-											_player.displayClientMessage(new TextComponent("3s To Fire Again"), (true));
 										new Object() {
 											private int ticks = 0;
 											private float waitTicks;
@@ -134,8 +113,6 @@ public class TitleProcedure {
 											}
 
 											private void run() {
-												if (entity instanceof Player _player && !_player.level.isClientSide())
-													_player.displayClientMessage(new TextComponent("2s To Fire Again"), (true));
 												new Object() {
 													private int ticks = 0;
 													private float waitTicks;
@@ -157,8 +134,6 @@ public class TitleProcedure {
 													}
 
 													private void run() {
-														if (entity instanceof Player _player && !_player.level.isClientSide())
-															_player.displayClientMessage(new TextComponent("1s To Fire Again"), (true));
 														new Object() {
 															private int ticks = 0;
 															private float waitTicks;
@@ -180,8 +155,6 @@ public class TitleProcedure {
 															}
 
 															private void run() {
-																if (entity instanceof Player _player && !_player.level.isClientSide())
-																	_player.displayClientMessage(new TextComponent("0s To Fire Again"), (true));
 																if ((entity.getCapability(ExplosiveggModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 																		.orElse(new ExplosiveggModVariables.PlayerVariables())).FireUse == 0
 																		|| (entity
