@@ -19,6 +19,7 @@ import net.minecraft.client.KeyMapping;
 import net.mcreator.explosivegg.network.MinionKeyMessage;
 import net.mcreator.explosivegg.network.LightninMessage;
 import net.mcreator.explosivegg.network.InvisMessage;
+import net.mcreator.explosivegg.network.GraveMessage;
 import net.mcreator.explosivegg.network.FireballMessage;
 import net.mcreator.explosivegg.ExplosiveggMod;
 
@@ -28,6 +29,7 @@ public class ExplosiveggModKeyMappings {
 	public static final KeyMapping INVIS = new KeyMapping("key.explosivegg.invis", GLFW.GLFW_KEY_DOWN, "key.categories.misc");
 	public static final KeyMapping LIGHTNIN = new KeyMapping("key.explosivegg.lightnin", GLFW.GLFW_KEY_RIGHT, "key.categories.misc");
 	public static final KeyMapping MINION_KEY = new KeyMapping("key.explosivegg.minion_key", GLFW.GLFW_KEY_LEFT, "key.categories.misc");
+	public static final KeyMapping GRAVE = new KeyMapping("key.explosivegg.grave", GLFW.GLFW_KEY_TAB, "key.categories.misc");
 
 	@SubscribeEvent
 	public static void registerKeyBindings(FMLClientSetupEvent event) {
@@ -35,6 +37,7 @@ public class ExplosiveggModKeyMappings {
 		ClientRegistry.registerKeyBinding(INVIS);
 		ClientRegistry.registerKeyBinding(LIGHTNIN);
 		ClientRegistry.registerKeyBinding(MINION_KEY);
+		ClientRegistry.registerKeyBinding(GRAVE);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -64,6 +67,12 @@ public class ExplosiveggModKeyMappings {
 					if (event.getAction() == GLFW.GLFW_PRESS) {
 						ExplosiveggMod.PACKET_HANDLER.sendToServer(new MinionKeyMessage(0, 0));
 						MinionKeyMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+					}
+				}
+				if (event.getKey() == GRAVE.getKey().getValue()) {
+					if (event.getAction() == GLFW.GLFW_PRESS) {
+						ExplosiveggMod.PACKET_HANDLER.sendToServer(new GraveMessage(0, 0));
+						GraveMessage.pressAction(Minecraft.getInstance().player, 0, 0);
 					}
 				}
 			}

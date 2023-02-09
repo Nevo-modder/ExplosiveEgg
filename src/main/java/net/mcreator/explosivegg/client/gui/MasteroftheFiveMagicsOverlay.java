@@ -53,7 +53,7 @@ public class MasteroftheFiveMagicsOverlay {
 			RenderSystem.setShaderColor(1, 1, 1, 1);
 			if (MasteroftheFiveMagicsDisplayOverlayIngameProcedure.execute(world, entity)) {
 				RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/screenshot_546.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + 171, posY + -112, 0, 0, 178, 179, 178, 179);
+				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + 182, posY + -120, 0, 0, 178, 179, 178, 179);
 
 			}
 			RenderSystem.depthMask(true);

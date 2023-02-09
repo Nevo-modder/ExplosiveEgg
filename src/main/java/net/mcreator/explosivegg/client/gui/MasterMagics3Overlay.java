@@ -53,13 +53,13 @@ public class MasterMagics3Overlay {
 			RenderSystem.setShaderColor(1, 1, 1, 1);
 			if (Master3Procedure.execute(world, entity)) {
 				RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/screenshot_546.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + 165, posY + -107, 0, 0, 178, 179, 178, 179);
+				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + 182, posY + -120, 0, 0, 178, 179, 178, 179);
 
 				RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/firecharge.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + 165, posY + -62, 0, 0, 128, 128, 128, 128);
+				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + 182, posY + -78, 0, 0, 128, 128, 128, 128);
 
 				RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/lightning.png"));
-				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + 117, posY + -107, 0, 0, 128, 128, 128, 128);
+				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + 133, posY + -120, 0, 0, 128, 128, 128, 128);
 
 			}
 			RenderSystem.depthMask(true);

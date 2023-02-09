@@ -42,16 +42,13 @@ public class KillsProcedure {
 		if (sourceentity == null)
 			return;
 		if (sourceentity instanceof Player) {
-			if (ExplosiveggModVariables.MapVariables.get(world).Kills < 250
+			if (ExplosiveggModVariables.MapVariables.get(world).Kills != 1
 					&& (sourceentity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY)
 							.getItem() == ExplosiveggModItems.HAT_HELMET.get()
 					&& (sourceentity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.INVISIBILITY) : false)) {
-				ExplosiveggModVariables.MapVariables.get(world).Kills = ExplosiveggModVariables.MapVariables.get(world).Kills + 1;
+				ExplosiveggModVariables.MapVariables.get(world).Kills = ExplosiveggModVariables.MapVariables.get(world).Kills - 1;
 				ExplosiveggModVariables.MapVariables.get(world).syncData(world);
-				if (sourceentity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(new TextComponent(((250 - ExplosiveggModVariables.MapVariables.get(world).Kills) + " Kills left")),
-							(true));
-			} else if (ExplosiveggModVariables.MapVariables.get(world).Kills == 250
+			} else if (ExplosiveggModVariables.MapVariables.get(world).Kills == 1
 					&& (sourceentity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY)
 							.getItem() == ExplosiveggModItems.HAT_HELMET.get()
 					&& (sourceentity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.INVISIBILITY) : false)) {
@@ -67,7 +64,7 @@ public class KillsProcedure {
 				ExplosiveggModVariables.MapVariables.get(world).Fire = true;
 				ExplosiveggModVariables.MapVariables.get(world).syncData(world);
 				if (sourceentity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(new TextComponent("Use 100 the Fire Charge Ability to get next ability"), (true));
+					_player.displayClientMessage(new TextComponent("Use 100 times the Fire Charge Ability to get next one!"), (true));
 			}
 		}
 	}

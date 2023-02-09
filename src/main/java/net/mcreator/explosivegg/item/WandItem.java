@@ -15,7 +15,7 @@ public class WandItem extends PickaxeItem {
 			}
 
 			public float getSpeed() {
-				return 4f;
+				return 1f;
 			}
 
 			public float getAttackDamageBonus() {

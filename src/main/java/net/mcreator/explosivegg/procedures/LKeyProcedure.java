@@ -60,19 +60,10 @@ public class LKeyProcedure {
 					entityToSpawn.setVisualOnly(false);
 					_level.addFreshEntity(entityToSpawn);
 				}
-				if (ExplosiveggModVariables.MapVariables.get(world).LightningUse < 80) {
-					ExplosiveggModVariables.MapVariables.get(world).LightningUse = ExplosiveggModVariables.MapVariables.get(world).LightningUse + 1;
+				if (ExplosiveggModVariables.MapVariables.get(world).LightningUse != 1) {
+					ExplosiveggModVariables.MapVariables.get(world).LightningUse = ExplosiveggModVariables.MapVariables.get(world).LightningUse - 1;
 					ExplosiveggModVariables.MapVariables.get(world).syncData(world);
-				}
-				if (ExplosiveggModVariables.MapVariables.get(world).LightningUse == 60
-						|| ExplosiveggModVariables.MapVariables.get(world).LightningUse == 30) {
-					if (entity instanceof Player _player && !_player.level.isClientSide())
-						_player.displayClientMessage(
-								new TextComponent(
-										((80 - ExplosiveggModVariables.MapVariables.get(world).LightningUse) + "Uses left to get the next ability!")),
-								(true));
-				}
-				if (ExplosiveggModVariables.MapVariables.get(world).LightningUse == 80) {
+				} else {
 					ExplosiveggModVariables.MapVariables.get(world).Minion = true;
 					ExplosiveggModVariables.MapVariables.get(world).syncData(world);
 					if (entity instanceof ServerPlayer _player) {

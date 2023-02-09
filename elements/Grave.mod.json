@@ -1,0 +1,12 @@
+{
+  "_fv": 33,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "TAB",
+    "keyBindingName": "Tab",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "GraveOnKeyPressed"
+    }
+  }
+}

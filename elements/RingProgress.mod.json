@@ -1,0 +1,345 @@
+{
+  "_fv": 33,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 257,
+    "height": 116,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Next Ability:",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Next Ability:",
+          "x": 93,
+          "y": 69
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Fireball",
+          "color": {
+            "value": -10092544,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "FireballFalse"
+          },
+          "name": "Fireball",
+          "x": 165,
+          "y": 70
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Lightning",
+          "color": {
+            "value": -3342337,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "LightningFalse"
+          },
+          "name": "Lightning",
+          "x": 165,
+          "y": 70
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Minion",
+          "color": {
+            "value": -10066330,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "MinionFalse"
+          },
+          "name": "Minion",
+          "x": 165,
+          "y": 70
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Your current task:",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Your current task:",
+          "x": 93,
+          "y": 103
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Kill 250 mobs/creatures while you're invisible",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "FireballFalse"
+          },
+          "name": "Kill 250 mobs/creatures while you're invisible",
+          "x": 93,
+          "y": 119
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:integer:Kills>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "FireballFalse"
+          },
+          "name": "<VAR:integer:Kills>",
+          "x": 93,
+          "y": 141
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:integer:FireUse>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "LightningFalse"
+          },
+          "name": "<VAR:integer:FireUse>",
+          "x": 93,
+          "y": 141
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:LightningUse>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "MinionFalse"
+          },
+          "name": "<VAR:LightningUse>",
+          "x": 93,
+          "y": 141
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Left",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Left",
+          "x": 115,
+          "y": 141
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Use the fireball ability 100 times",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "LightningFalse"
+          },
+          "name": "Use the fireball ability 100 times",
+          "x": 93,
+          "y": 119
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Use the lightning ability 80 times",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "MinionFalse"
+          },
+          "name": "Use the lightning ability 80 times",
+          "x": 93,
+          "y": 118
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progbar.png",
+          "use1Xscale": false,
+          "name": "progbar.png",
+          "x": 90,
+          "y": 85
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progbar1.png",
+          "use1Xscale": false,
+          "name": "progbar1.png",
+          "x": 91,
+          "y": 85
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progbar2.png",
+          "use1Xscale": false,
+          "name": "progbar2.png",
+          "x": 90,
+          "y": 85
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progbar3.png",
+          "use1Xscale": false,
+          "name": "progbar3.png",
+          "x": 90,
+          "y": 85
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progbar4.png",
+          "use1Xscale": false,
+          "name": "progbar4.png",
+          "x": 91,
+          "y": 85
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progbar5.png",
+          "use1Xscale": false,
+          "name": "progbar5.png",
+          "x": 91,
+          "y": 85
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progbar6.png",
+          "use1Xscale": false,
+          "name": "progbar6.png",
+          "x": 91,
+          "y": 85
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progbar7.png",
+          "use1Xscale": false,
+          "name": "progbar7.png",
+          "x": 91,
+          "y": 85
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progbar8.png",
+          "use1Xscale": false,
+          "name": "progbar8.png",
+          "x": 91,
+          "y": 85
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progbar9.png",
+          "use1Xscale": false,
+          "name": "progbar9.png",
+          "x": 90,
+          "y": 85
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progbar10.png",
+          "use1Xscale": false,
+          "name": "progbar10.png",
+          "x": 90,
+          "y": 85
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progbar11.png",
+          "use1Xscale": false,
+          "name": "progbar11.png",
+          "x": 90,
+          "y": 85
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progbar12.png",
+          "use1Xscale": false,
+          "name": "progbar12.png",
+          "x": 91,
+          "y": 85
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "progbar13.png",
+          "use1Xscale": false,
+          "name": "progbar13.png",
+          "x": 91,
+          "y": 85
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

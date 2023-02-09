@@ -10,8 +10,8 @@
           "image": "screenshot_546.png",
           "use1Xscale": false,
           "name": "screenshot_546.png",
-          "x": 378,
-          "y": 13
+          "x": 395,
+          "y": 0
         }
       },
       {
@@ -20,8 +20,8 @@
           "image": "firecharge.png",
           "use1Xscale": true,
           "name": "firecharge.png",
-          "x": 378,
-          "y": 58
+          "x": 395,
+          "y": 42
         }
       },
       {
@@ -30,8 +30,8 @@
           "image": "lightning.png",
           "use1Xscale": true,
           "name": "lightning.png",
-          "x": 330,
-          "y": 13
+          "x": 346,
+          "y": 0
         }
       }
     ],

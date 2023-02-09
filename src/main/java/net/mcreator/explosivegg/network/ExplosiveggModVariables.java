@@ -151,15 +151,17 @@ public class ExplosiveggModVariables {
 		public boolean evokerattack2 = false;
 		public boolean ring = false;
 		public boolean Time = false;
-		public double Kills = 0.0;
+		public double Kills = 250.0;
 		public boolean Fire = false;
 		public boolean Lightning = false;
-		public double LightningUse = 0;
+		public double LightningUse = 80.0;
 		public boolean LTime = false;
 		public boolean Minion = false;
 		public boolean MTime = false;
 		public double LTimeSec = -1.0;
 		public double FTimeSec = -1.0;
+		public double MTimer = 0;
+		public double prog = 0;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -181,6 +183,8 @@ public class ExplosiveggModVariables {
 			MTime = nbt.getBoolean("MTime");
 			LTimeSec = nbt.getDouble("LTimeSec");
 			FTimeSec = nbt.getDouble("FTimeSec");
+			MTimer = nbt.getDouble("MTimer");
+			prog = nbt.getDouble("prog");
 		}
 
 		@Override
@@ -198,6 +202,8 @@ public class ExplosiveggModVariables {
 			nbt.putBoolean("MTime", MTime);
 			nbt.putDouble("LTimeSec", LTimeSec);
 			nbt.putDouble("FTimeSec", FTimeSec);
+			nbt.putDouble("MTimer", MTimer);
+			nbt.putDouble("prog", prog);
 			return nbt;
 		}
 
@@ -287,7 +293,7 @@ public class ExplosiveggModVariables {
 	}
 
 	public static class PlayerVariables {
-		public double FireUse = 0;
+		public double FireUse = 100.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)

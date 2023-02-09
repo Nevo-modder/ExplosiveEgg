@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.gui.screens.MenuScreens;
 
 import net.mcreator.explosivegg.client.gui.TradeScreen;
+import net.mcreator.explosivegg.client.gui.RingProgressScreen;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ExplosiveggModScreens {
@@ -19,6 +20,7 @@ public class ExplosiveggModScreens {
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
 			MenuScreens.register(ExplosiveggModMenus.TRADE, TradeScreen::new);
+			MenuScreens.register(ExplosiveggModMenus.RING_PROGRESS, RingProgressScreen::new);
 		});
 	}
 }

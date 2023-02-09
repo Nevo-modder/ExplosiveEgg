@@ -2,10 +2,6 @@ package net.mcreator.explosivegg.procedures;
 
 import org.checkerframework.checker.units.qual.Time;
 
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
-
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -43,32 +39,9 @@ public class MinionProcedureProcedure {
 				}
 				ExplosiveggModVariables.MapVariables.get(world).MTime = true;
 				ExplosiveggModVariables.MapVariables.get(world).syncData(world);
-				new Object() {
-					private int ticks = 0;
-					private float waitTicks;
-					private LevelAccessor world;
-
-					public void start(LevelAccessor world, int waitTicks) {
-						this.waitTicks = waitTicks;
-						MinecraftForge.EVENT_BUS.register(this);
-						this.world = world;
-					}
-
-					@SubscribeEvent
-					public void tick(TickEvent.ServerTickEvent event) {
-						if (event.phase == TickEvent.Phase.END) {
-							this.ticks += 1;
-							if (this.ticks >= this.waitTicks)
-								run();
-						}
-					}
-
-					private void run() {
-						ExplosiveggModVariables.MapVariables.get(world).MTime = false;
-						ExplosiveggModVariables.MapVariables.get(world).syncData(world);
-						MinecraftForge.EVENT_BUS.unregister(this);
-					}
-				}.start(world, 800);
+				ExplosiveggModVariables.MapVariables.get(world).MTimer = 0;
+				ExplosiveggModVariables.MapVariables.get(world).syncData(world);
+				MinionTimerProcedure.execute(world);
 			} else {
 				if (entity instanceof Player _player && !_player.level.isClientSide())
 					_player.displayClientMessage(new TextComponent("Can't use it right now, wait."), (true));

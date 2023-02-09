@@ -13,6 +13,7 @@ import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 
 import net.mcreator.explosivegg.world.inventory.TradeMenu;
+import net.mcreator.explosivegg.world.inventory.RingProgressMenu;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -21,6 +22,8 @@ import java.util.ArrayList;
 public class ExplosiveggModMenus {
 	private static final List<MenuType<?>> REGISTRY = new ArrayList<>();
 	public static final MenuType<TradeMenu> TRADE = register("trade", (id, inv, extraData) -> new TradeMenu(id, inv, extraData));
+	public static final MenuType<RingProgressMenu> RING_PROGRESS = register("ring_progress",
+			(id, inv, extraData) -> new RingProgressMenu(id, inv, extraData));
 
 	private static <T extends AbstractContainerMenu> MenuType<T> register(String registryname, IContainerFactory<T> containerFactory) {
 		MenuType<T> menuType = new MenuType<T>(containerFactory);

@@ -51,7 +51,7 @@ public class LBar6Overlay {
 			RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA,
 					GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
 			RenderSystem.setShaderColor(1, 1, 1, 1);
-			if (LBar6DisplayProcedure.execute(world)) {
+			if (LBar6DisplayProcedure.execute(world, entity)) {
 				RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/bar6.png"));
 				Minecraft.getInstance().gui.blit(event.getMatrixStack(), posX + 153, posY + 68, 0, 0, 32, 64, 32, 64);
 

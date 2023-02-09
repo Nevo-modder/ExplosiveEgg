@@ -32,21 +32,23 @@ public class PlayeLeaveswProcedure {
 			return;
 		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY)
 				.getItem() == ExplosiveggModItems.HAT_HELMET.get() && ExplosiveggModVariables.MapVariables.get(world).Fire == true) {
-			ExplosiveggModVariables.MapVariables.get(world).Time = false;
+			ExplosiveggModVariables.MapVariables.get(world).Time = true;
 			ExplosiveggModVariables.MapVariables.get(world).syncData(world);
-			ExplosiveggModVariables.MapVariables.get(world).FTimeSec = 6;
+			ExplosiveggModVariables.MapVariables.get(world).FTimeSec = 0;
 			ExplosiveggModVariables.MapVariables.get(world).syncData(world);
 		}
 		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY)
 				.getItem() == ExplosiveggModItems.HAT_HELMET.get() && ExplosiveggModVariables.MapVariables.get(world).Lightning == true) {
-			ExplosiveggModVariables.MapVariables.get(world).LTime = false;
+			ExplosiveggModVariables.MapVariables.get(world).LTime = true;
 			ExplosiveggModVariables.MapVariables.get(world).syncData(world);
-			ExplosiveggModVariables.MapVariables.get(world).LTimeSec = 10;
+			ExplosiveggModVariables.MapVariables.get(world).LTimeSec = 0;
 			ExplosiveggModVariables.MapVariables.get(world).syncData(world);
 		}
 		if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY)
 				.getItem() == ExplosiveggModItems.HAT_HELMET.get() && ExplosiveggModVariables.MapVariables.get(world).Minion == true) {
-			ExplosiveggModVariables.MapVariables.get(world).MTime = false;
+			ExplosiveggModVariables.MapVariables.get(world).MTime = true;
+			ExplosiveggModVariables.MapVariables.get(world).syncData(world);
+			ExplosiveggModVariables.MapVariables.get(world).MTimer = 0;
 			ExplosiveggModVariables.MapVariables.get(world).syncData(world);
 		}
 		{

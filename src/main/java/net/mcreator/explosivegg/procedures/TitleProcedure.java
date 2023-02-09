@@ -163,25 +163,21 @@ public class TitleProcedure {
 														ExplosiveggModVariables.MapVariables
 																.get(world).FTimeSec = ExplosiveggModVariables.MapVariables.get(world).FTimeSec + 1;
 														ExplosiveggModVariables.MapVariables.get(world).syncData(world);
+														ExplosiveggModVariables.MapVariables.get(world).Time = false;
+														ExplosiveggModVariables.MapVariables.get(world).syncData(world);
 														if ((entity.getCapability(ExplosiveggModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-																.orElse(new ExplosiveggModVariables.PlayerVariables())).FireUse == 0
-																|| (entity.getCapability(ExplosiveggModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-																		.orElse(new ExplosiveggModVariables.PlayerVariables())).FireUse == 20
-																|| (entity.getCapability(ExplosiveggModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-																		.orElse(new ExplosiveggModVariables.PlayerVariables())).FireUse == 40
-																|| (entity.getCapability(ExplosiveggModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-																		.orElse(new ExplosiveggModVariables.PlayerVariables())).FireUse == 60
-																|| (entity.getCapability(ExplosiveggModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-																		.orElse(new ExplosiveggModVariables.PlayerVariables())).FireUse == 80
-																|| (entity.getCapability(ExplosiveggModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-																		.orElse(new ExplosiveggModVariables.PlayerVariables())).FireUse == 99) {
-															if (entity instanceof Player _player && !_player.level.isClientSide())
-																_player.displayClientMessage(new TextComponent(((100 - (entity
+																.orElse(new ExplosiveggModVariables.PlayerVariables())).FireUse != 1) {
+															{
+																double _setval = (entity
 																		.getCapability(ExplosiveggModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-																		.orElse(new ExplosiveggModVariables.PlayerVariables())).FireUse)
-																		+ " Uses of fire charge to get next ability!")), (true));
-														} else if ((entity.getCapability(ExplosiveggModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-																.orElse(new ExplosiveggModVariables.PlayerVariables())).FireUse == 100) {
+																		.orElse(new ExplosiveggModVariables.PlayerVariables())).FireUse - 1;
+																entity.getCapability(ExplosiveggModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+																		.ifPresent(capability -> {
+																			capability.FireUse = _setval;
+																			capability.syncPlayerVariables(entity);
+																		});
+															}
+														} else {
 															if (entity instanceof ServerPlayer _player) {
 																Advancement _adv = _player.server.getAdvancements()
 																		.getAdvancement(new ResourceLocation("explosivegg:lightning_1"));

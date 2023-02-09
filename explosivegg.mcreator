@@ -854,6 +854,10 @@
         "return_type": "logic",
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -890,113 +894,9 @@
         "return_type": "logic",
         "dependencies": [
           {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Lightning"
-    },
-    {
-      "name": "LBar4Display",
-      "type": "procedure",
-      "sortid": 63,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "l_bar_4_display",
-      "metadata": {
-        "return_type": "logic",
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Lightning"
-    },
-    {
-      "name": "LBar5Display",
-      "type": "procedure",
-      "sortid": 64,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "l_bar_5_display",
-      "metadata": {
-        "return_type": "logic",
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Lightning"
-    },
-    {
-      "name": "LBar6Display",
-      "type": "procedure",
-      "sortid": 65,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "l_bar_6_display",
-      "metadata": {
-        "return_type": "logic",
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Lightning"
-    },
-    {
-      "name": "LBar7Display",
-      "type": "procedure",
-      "sortid": 66,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "l_bar_7_display",
-      "metadata": {
-        "return_type": "logic",
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Lightning"
-    },
-    {
-      "name": "LBar8Display",
-      "type": "procedure",
-      "sortid": 67,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "l_bar_8_display",
-      "metadata": {
-        "return_type": "logic",
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Lightning"
-    },
-    {
-      "name": "LBar9Display",
-      "type": "procedure",
-      "sortid": 68,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "l_bar_9_display",
-      "metadata": {
-        "return_type": "logic",
-        "dependencies": [
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "world",
             "type": "world"
@@ -1015,6 +915,10 @@
       "metadata": {
         "return_type": "logic",
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "world",
             "type": "world"
@@ -1212,6 +1116,10 @@
         "return_type": "logic",
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -1229,6 +1137,10 @@
       "metadata": {
         "return_type": "logic",
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "world",
             "type": "world"
@@ -1248,6 +1160,10 @@
         "return_type": "logic",
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -1265,6 +1181,10 @@
       "metadata": {
         "return_type": "logic",
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "world",
             "type": "world"
@@ -1284,6 +1204,10 @@
         "return_type": "logic",
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -1301,6 +1225,10 @@
       "metadata": {
         "return_type": "logic",
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "world",
             "type": "world"
@@ -1336,6 +1264,615 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "wand"
+    },
+    {
+      "name": "MinionTimer",
+      "type": "procedure",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minion_timer",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Minion"
+    },
+    {
+      "name": "MBar1",
+      "type": "overlay",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "m_bar_1",
+      "path": "~/Minion"
+    },
+    {
+      "name": "MBar2",
+      "type": "overlay",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "m_bar_2",
+      "path": "~/Minion"
+    },
+    {
+      "name": "MBar3",
+      "type": "overlay",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "m_bar_3",
+      "path": "~/Minion"
+    },
+    {
+      "name": "MBar4",
+      "type": "overlay",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "m_bar_4",
+      "path": "~/Minion"
+    },
+    {
+      "name": "MBar5",
+      "type": "overlay",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "m_bar_5",
+      "path": "~/Minion"
+    },
+    {
+      "name": "Mbar6",
+      "type": "overlay",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mbar_6",
+      "path": "~/Minion"
+    },
+    {
+      "name": "MBar7",
+      "type": "overlay",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "m_bar_7",
+      "path": "~/Minion"
+    },
+    {
+      "name": "MBar8",
+      "type": "overlay",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "m_bar_8",
+      "path": "~/Minion"
+    },
+    {
+      "name": "MBar9",
+      "type": "overlay",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "m_bar_9",
+      "path": "~/Minion"
+    },
+    {
+      "name": "MBar10",
+      "type": "overlay",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "m_bar_10",
+      "path": "~/Minion"
+    },
+    {
+      "name": "MBar11",
+      "type": "overlay",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "m_bar_11",
+      "path": "~/Minion"
+    },
+    {
+      "name": "MBarDisplay1",
+      "type": "procedure",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "m_bar_display_1",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Minion"
+    },
+    {
+      "name": "MBarDisplay2",
+      "type": "procedure",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "m_bar_display_2",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Minion"
+    },
+    {
+      "name": "MBarDisplay11",
+      "type": "procedure",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "m_bar_display_11",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Minion"
+    },
+    {
+      "name": "MBarDisplay3",
+      "type": "procedure",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "m_bar_display_3",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Minion"
+    },
+    {
+      "name": "MBarDisplay4",
+      "type": "procedure",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "m_bar_display_4",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Minion"
+    },
+    {
+      "name": "MBarDisplay5",
+      "type": "procedure",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "m_bar_display_5",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Minion"
+    },
+    {
+      "name": "MBarDisplay6",
+      "type": "procedure",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "m_bar_display_6",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Minion"
+    },
+    {
+      "name": "MBarDisplay7",
+      "type": "procedure",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "m_bar_display_7",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Minion"
+    },
+    {
+      "name": "MBarDisplay8",
+      "type": "procedure",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "m_bar_display_8",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Minion"
+    },
+    {
+      "name": "MBarDisplay9",
+      "type": "procedure",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "m_bar_display_9",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Minion"
+    },
+    {
+      "name": "MBarDisplay10",
+      "type": "procedure",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "m_bar_display_10",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Minion"
+    },
+    {
+      "name": "LBar4Display",
+      "type": "procedure",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_4_display",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Lightning"
+    },
+    {
+      "name": "LBar5Display",
+      "type": "procedure",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_5_display",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Lightning"
+    },
+    {
+      "name": "LBar6Display",
+      "type": "procedure",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_6_display",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Lightning"
+    },
+    {
+      "name": "LBar7Display",
+      "type": "procedure",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_7_display",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Lightning"
+    },
+    {
+      "name": "LBar8Display",
+      "type": "procedure",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_8_display",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Lightning"
+    },
+    {
+      "name": "LBar9Display",
+      "type": "procedure",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "l_bar_9_display",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Lightning"
+    },
+    {
+      "name": "RingProgress",
+      "type": "gui",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ring_progress"
+    },
+    {
+      "name": "FireballFalse",
+      "type": "procedure",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fireball_false",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LightningFalse",
+      "type": "procedure",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_false",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MinionFalse",
+      "type": "procedure",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minion_false",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GraveOnKeyPressed",
+      "type": "procedure",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grave_on_key_pressed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Grave",
+      "type": "keybind",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grave"
+    },
+    {
+      "name": "ProgChangeNum",
+      "type": "procedure",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prog_change_num",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1367,7 +1904,7 @@
       "name": "Kills",
       "type": "number",
       "scope": "map",
-      "value": "0.0"
+      "value": "250.0"
     },
     {
       "name": "Fire",
@@ -1379,7 +1916,7 @@
       "name": "FireUse",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "0"
+      "value": "100.0"
     },
     {
       "name": "Lightning",
@@ -1391,7 +1928,7 @@
       "name": "LightningUse",
       "type": "number",
       "scope": "map",
-      "value": "0"
+      "value": "80.0"
     },
     {
       "name": "LTime",
@@ -1422,6 +1959,18 @@
       "type": "number",
       "scope": "map",
       "value": "-1.0"
+    },
+    {
+      "name": "MTimer",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "prog",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -1533,6 +2082,7 @@
       "subtitles.hurt": "",
       "item.explosivegg.hat_chestplate": "Hat Body",
       "subtitles.disappear": "",
+      "key.explosivegg.grave": "Tab",
       "entity.explosivegg.skeleton_ekover": "Skeleton Ekover",
       "item.explosivegg.skeleton_pillager_2_spawn_egg": "Skeleton Pillager Spawn Egg",
       "item.explosivegg.hat_boots": "Hat Boots",
