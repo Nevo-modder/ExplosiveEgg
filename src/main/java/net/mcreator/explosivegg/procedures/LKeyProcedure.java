@@ -63,6 +63,7 @@ public class LKeyProcedure {
 				if (ExplosiveggModVariables.MapVariables.get(world).LightningUse != 1) {
 					ExplosiveggModVariables.MapVariables.get(world).LightningUse = ExplosiveggModVariables.MapVariables.get(world).LightningUse - 1;
 					ExplosiveggModVariables.MapVariables.get(world).syncData(world);
+					ProgChangeNumProcedure.execute(world, entity);
 				} else {
 					ExplosiveggModVariables.MapVariables.get(world).Minion = true;
 					ExplosiveggModVariables.MapVariables.get(world).syncData(world);
@@ -75,6 +76,8 @@ public class LKeyProcedure {
 								_player.getAdvancements().award(_adv, (String) _iterator.next());
 						}
 					}
+					ExplosiveggModVariables.MapVariables.get(world).prog = 0;
+					ExplosiveggModVariables.MapVariables.get(world).syncData(world);
 				}
 				LightningTimerProcedure.execute(world);
 			} else {

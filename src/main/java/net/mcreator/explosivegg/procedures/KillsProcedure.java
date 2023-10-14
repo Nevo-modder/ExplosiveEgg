@@ -30,16 +30,16 @@ public class KillsProcedure {
 	@SubscribeEvent
 	public static void onEntityDeath(LivingDeathEvent event) {
 		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level, event.getSource().getEntity());
+			execute(event, event.getEntity().level, event.getEntity(), event.getSource().getEntity());
 		}
 	}
 
-	public static void execute(LevelAccessor world, Entity sourceentity) {
-		execute(null, world, sourceentity);
+	public static void execute(LevelAccessor world, Entity entity, Entity sourceentity) {
+		execute(null, world, entity, sourceentity);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, Entity sourceentity) {
-		if (sourceentity == null)
+	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity, Entity sourceentity) {
+		if (entity == null || sourceentity == null)
 			return;
 		if (sourceentity instanceof Player) {
 			if (ExplosiveggModVariables.MapVariables.get(world).Kills != 1
@@ -48,6 +48,7 @@ public class KillsProcedure {
 					&& (sourceentity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(MobEffects.INVISIBILITY) : false)) {
 				ExplosiveggModVariables.MapVariables.get(world).Kills = ExplosiveggModVariables.MapVariables.get(world).Kills - 1;
 				ExplosiveggModVariables.MapVariables.get(world).syncData(world);
+				ProgChangeNumProcedure.execute(world, entity);
 			} else if (ExplosiveggModVariables.MapVariables.get(world).Kills == 1
 					&& (sourceentity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY)
 							.getItem() == ExplosiveggModItems.HAT_HELMET.get()
@@ -65,6 +66,8 @@ public class KillsProcedure {
 				ExplosiveggModVariables.MapVariables.get(world).syncData(world);
 				if (sourceentity instanceof Player _player && !_player.level.isClientSide())
 					_player.displayClientMessage(new TextComponent("Use 100 times the Fire Charge Ability to get next one!"), (true));
+				ExplosiveggModVariables.MapVariables.get(world).prog = 0;
+				ExplosiveggModVariables.MapVariables.get(world).syncData(world);
 			}
 		}
 	}

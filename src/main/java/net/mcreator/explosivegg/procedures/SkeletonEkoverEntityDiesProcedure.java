@@ -10,7 +10,7 @@ public class SkeletonEkoverEntityDiesProcedure {
 			return;
 		if (sourceentity instanceof Player) {
 			if (sourceentity instanceof Player _player && !_player.level.isClientSide())
-				_player.displayClientMessage(new TextComponent("Kill 250 creatures while invisible to get your next ability!"), (true));
+				_player.displayClientMessage(new TextComponent("Press TAB to view your tasks!"), (true));
 		}
 	}
 }

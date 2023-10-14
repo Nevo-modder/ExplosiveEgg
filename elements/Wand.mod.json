@@ -5,12 +5,12 @@
     "renderType": 0,
     "texture": "wand",
     "customModelName": "Normal",
-    "name": "Wand",
+    "name": "Wooden Wand",
     "specialInfo": [],
     "creativeTab": {
       "value": "TOOLS"
     },
-    "toolType": "Pickaxe",
+    "toolType": "Special",
     "harvestLevel": 1,
     "efficiency": 1.0,
     "attackSpeed": 1.0,

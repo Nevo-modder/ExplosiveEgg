@@ -477,6 +477,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "sourceentity",
             "type": "entity"
           },
@@ -727,14 +731,6 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "village"
-    },
-    {
-      "name": "SkeletonBiome",
-      "type": "biome",
-      "sortid": 52,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "skeleton_biome"
     },
     {
       "name": "VillageOnStructureInstanceGenerated",
@@ -1873,6 +1869,300 @@
           }
         ]
       }
+    },
+    {
+      "name": "Prog",
+      "type": "procedure",
+      "sortid": 138,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prog",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/prog"
+    },
+    {
+      "name": "Prog1",
+      "type": "procedure",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prog_1",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/prog"
+    },
+    {
+      "name": "Prog2",
+      "type": "procedure",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prog_2",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/prog"
+    },
+    {
+      "name": "Prog3",
+      "type": "procedure",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prog_3",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/prog"
+    },
+    {
+      "name": "Prog4",
+      "type": "procedure",
+      "sortid": 142,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prog_4",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/prog"
+    },
+    {
+      "name": "Prog5",
+      "type": "procedure",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prog_5",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/prog"
+    },
+    {
+      "name": "Prog6",
+      "type": "procedure",
+      "sortid": 144,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prog_6",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/prog"
+    },
+    {
+      "name": "Prog7",
+      "type": "procedure",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prog_7",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/prog"
+    },
+    {
+      "name": "Prog8",
+      "type": "procedure",
+      "sortid": 146,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prog_8",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/prog"
+    },
+    {
+      "name": "Prog9",
+      "type": "procedure",
+      "sortid": 147,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prog_9",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/prog"
+    },
+    {
+      "name": "Prog10",
+      "type": "procedure",
+      "sortid": 148,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prog_10",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/prog"
+    },
+    {
+      "name": "Prog11",
+      "type": "procedure",
+      "sortid": 149,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prog_11",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/prog"
+    },
+    {
+      "name": "Prog12",
+      "type": "procedure",
+      "sortid": 150,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prog_12",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/prog"
+    },
+    {
+      "name": "Prog13",
+      "type": "procedure",
+      "sortid": 151,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prog_13",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/prog"
+    },
+    {
+      "name": "None",
+      "type": "procedure",
+      "sortid": 152,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "none",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "None2",
+      "type": "procedure",
+      "sortid": 153,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "none_2",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "StoneWand",
+      "type": "tool",
+      "sortid": 154,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_wand"
     }
   ],
   "variable_elements": [
@@ -2049,9 +2339,9 @@
   ],
   "language_map": {
     "en_us": {
-      "item.explosivegg.samurai_helmet_helmet": "Samurai Helmet ",
-      "key.explosivegg.fireball": "Fireball",
       "subtitles.skeletonpillagerhurtsound": "",
+      "key.explosivegg.fireball": "Fireball",
+      "item.explosivegg.samurai_helmet_helmet": "Samurai Helmet ",
       "item.explosivegg.zombie_samurai_spawn_egg": "Zombie Samurai Spawn Egg",
       "item.explosivegg.hat_helmet": "Skeleton Evoker Ring",
       "key.explosivegg.invis": "Invis",
@@ -2066,8 +2356,8 @@
       "item.explosivegg.hat_leggings": "Hat Leggings",
       "advancements.lightning_1.descr": "You are able using lightning while Evoker\u0027s Ring on",
       "item.explosivegg.spiked_ball_mace": "Spiked Ball Mace",
-      "item.explosivegg.skeleton_villager_spawn_egg": "Skeleton Villager Spawn Egg",
       "item.explosivegg.katana": "Katana",
+      "item.explosivegg.skeleton_villager_spawn_egg": "Skeleton Villager Spawn Egg",
       "item.explosivegg.samurai_helmet_leggings": "Samurai Helmet Leggings",
       "item.explosivegg.firecharge": "Firecharge",
       "subtitles.skeletonsummon": "",
@@ -2078,7 +2368,7 @@
       "item.explosivegg.skeleton_vindicator_spawn_egg": "Skeleton Vindicator Spawn Egg",
       "subtitles.skeletonpillagerlivingsound": "",
       "subtitles.pillagersound": "",
-      "item.explosivegg.wand": "Wand",
+      "item.explosivegg.wand": "Wooden Wand",
       "subtitles.hurt": "",
       "item.explosivegg.hat_chestplate": "Hat Body",
       "subtitles.disappear": "",
@@ -2094,8 +2384,8 @@
       "item.explosivegg.lightning_item": "0",
       "advancements.lightning_1.title": "Lightning Ability",
       "advancements.minion_adv.descr": "You are able using the  Minion while Evoker\u0027s Ring on",
+      "item.explosivegg.stone_wand": "Wooden Wand",
       "subtitles.skeletonevokerhurt": "",
-      "biome.explosivegg.skeleton_biome": "Skeleton Biome",
       "advancements.fire_charge_adv.title": "Fire Charge Ability",
       "subtitles.lightning": ""
     }
@@ -2113,6 +2403,10 @@
       },
       {
         "name": "Minion",
+        "children": []
+      },
+      {
+        "name": "prog",
         "children": []
       }
     ]

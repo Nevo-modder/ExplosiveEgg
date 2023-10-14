@@ -45,11 +45,12 @@ public class BkeyProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				ProgChangeNumProcedure.execute(world, entity);
 				ExplosiveggModVariables.MapVariables.get(world).FTimeSec = 0;
 				ExplosiveggModVariables.MapVariables.get(world).syncData(world);
-				TitleProcedure.execute(world, entity);
 				ExplosiveggModVariables.MapVariables.get(world).Time = true;
 				ExplosiveggModVariables.MapVariables.get(world).syncData(world);
+				TitleProcedure.execute(world, entity);
 			} else {
 				if (entity instanceof Player _player && !_player.level.isClientSide())
 					_player.displayClientMessage(new TextComponent("Can't use it right now, wait to the bar to be full."), (true));

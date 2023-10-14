@@ -18,6 +18,9 @@
             "value": -12829636,
             "falpha": 0.0
           },
+          "displayCondition": {
+            "name": "None"
+          },
           "name": "Next Ability:",
           "x": 93,
           "y": 69
@@ -79,6 +82,9 @@
             "value": -12829636,
             "falpha": 0.0
           },
+          "displayCondition": {
+            "name": "None"
+          },
           "name": "Your current task:",
           "x": 93,
           "y": 103
@@ -112,7 +118,7 @@
             "name": "FireballFalse"
           },
           "name": "<VAR:integer:Kills>",
-          "x": 93,
+          "x": 94,
           "y": 141
         }
       },
@@ -156,6 +162,9 @@
             "value": -12829636,
             "falpha": 0.0
           },
+          "displayCondition": {
+            "name": "None"
+          },
           "name": "Left",
           "x": 115,
           "y": 141
@@ -198,6 +207,9 @@
         "data": {
           "image": "progbar.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "Prog13"
+          },
           "name": "progbar.png",
           "x": 90,
           "y": 85
@@ -208,8 +220,11 @@
         "data": {
           "image": "progbar1.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "Prog12"
+          },
           "name": "progbar1.png",
-          "x": 91,
+          "x": 90,
           "y": 85
         }
       },
@@ -218,6 +233,9 @@
         "data": {
           "image": "progbar2.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "Prog11"
+          },
           "name": "progbar2.png",
           "x": 90,
           "y": 85
@@ -228,6 +246,9 @@
         "data": {
           "image": "progbar3.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "Prog10"
+          },
           "name": "progbar3.png",
           "x": 90,
           "y": 85
@@ -238,6 +259,9 @@
         "data": {
           "image": "progbar4.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "Prog9"
+          },
           "name": "progbar4.png",
           "x": 91,
           "y": 85
@@ -248,6 +272,9 @@
         "data": {
           "image": "progbar5.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "Prog8"
+          },
           "name": "progbar5.png",
           "x": 91,
           "y": 85
@@ -258,6 +285,9 @@
         "data": {
           "image": "progbar6.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "Prog7"
+          },
           "name": "progbar6.png",
           "x": 91,
           "y": 85
@@ -268,6 +298,9 @@
         "data": {
           "image": "progbar7.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "Prog6"
+          },
           "name": "progbar7.png",
           "x": 91,
           "y": 85
@@ -278,6 +311,9 @@
         "data": {
           "image": "progbar8.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "Prog5"
+          },
           "name": "progbar8.png",
           "x": 91,
           "y": 85
@@ -288,6 +324,9 @@
         "data": {
           "image": "progbar9.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "Prog4"
+          },
           "name": "progbar9.png",
           "x": 90,
           "y": 85
@@ -298,6 +337,9 @@
         "data": {
           "image": "progbar10.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "Prog3"
+          },
           "name": "progbar10.png",
           "x": 90,
           "y": 85
@@ -308,6 +350,9 @@
         "data": {
           "image": "progbar11.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "Prog2"
+          },
           "name": "progbar11.png",
           "x": 90,
           "y": 85
@@ -318,6 +363,9 @@
         "data": {
           "image": "progbar12.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "Prog1"
+          },
           "name": "progbar12.png",
           "x": 91,
           "y": 85
@@ -328,9 +376,28 @@
         "data": {
           "image": "progbar13.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "Prog"
+          },
           "name": "progbar13.png",
-          "x": 91,
+          "x": 90,
           "y": 85
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "You have unlocked all the abilities!",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "None2"
+          },
+          "name": "You have unlocked all the abilities!",
+          "x": 118,
+          "y": 111
         }
       }
     ],

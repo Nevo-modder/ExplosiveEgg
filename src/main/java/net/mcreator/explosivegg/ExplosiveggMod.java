@@ -30,7 +30,6 @@ import net.mcreator.explosivegg.init.ExplosiveggModItems;
 import net.mcreator.explosivegg.init.ExplosiveggModFeatures;
 import net.mcreator.explosivegg.init.ExplosiveggModEntities;
 import net.mcreator.explosivegg.init.ExplosiveggModBlocks;
-import net.mcreator.explosivegg.init.ExplosiveggModBiomes;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -53,8 +52,6 @@ public class ExplosiveggMod {
 		ExplosiveggModEntities.REGISTRY.register(bus);
 
 		ExplosiveggModFeatures.REGISTRY.register(bus);
-
-		ExplosiveggModBiomes.REGISTRY.register(bus);
 
 	}
 

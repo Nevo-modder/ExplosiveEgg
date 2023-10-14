@@ -166,18 +166,7 @@ public class TitleProcedure {
 														ExplosiveggModVariables.MapVariables.get(world).Time = false;
 														ExplosiveggModVariables.MapVariables.get(world).syncData(world);
 														if ((entity.getCapability(ExplosiveggModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-																.orElse(new ExplosiveggModVariables.PlayerVariables())).FireUse != 1) {
-															{
-																double _setval = (entity
-																		.getCapability(ExplosiveggModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-																		.orElse(new ExplosiveggModVariables.PlayerVariables())).FireUse - 1;
-																entity.getCapability(ExplosiveggModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-																		.ifPresent(capability -> {
-																			capability.FireUse = _setval;
-																			capability.syncPlayerVariables(entity);
-																		});
-															}
-														} else {
+																.orElse(new ExplosiveggModVariables.PlayerVariables())).FireUse == 1) {
 															if (entity instanceof ServerPlayer _player) {
 																Advancement _adv = _player.server.getAdvancements()
 																		.getAdvancement(new ResourceLocation("explosivegg:lightning_1"));
@@ -194,6 +183,8 @@ public class TitleProcedure {
 																_player.displayClientMessage(
 																		new TextComponent("Use the lightning 80 times to get the next ability!"),
 																		(true));
+															ExplosiveggModVariables.MapVariables.get(world).prog = 0;
+															ExplosiveggModVariables.MapVariables.get(world).syncData(world);
 														}
 														MinecraftForge.EVENT_BUS.unregister(this);
 													}

@@ -10,6 +10,22 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.explosivegg.world.inventory.RingProgressMenu;
+import net.mcreator.explosivegg.procedures.ProgProcedure;
+import net.mcreator.explosivegg.procedures.Prog9Procedure;
+import net.mcreator.explosivegg.procedures.Prog8Procedure;
+import net.mcreator.explosivegg.procedures.Prog7Procedure;
+import net.mcreator.explosivegg.procedures.Prog6Procedure;
+import net.mcreator.explosivegg.procedures.Prog5Procedure;
+import net.mcreator.explosivegg.procedures.Prog4Procedure;
+import net.mcreator.explosivegg.procedures.Prog3Procedure;
+import net.mcreator.explosivegg.procedures.Prog2Procedure;
+import net.mcreator.explosivegg.procedures.Prog1Procedure;
+import net.mcreator.explosivegg.procedures.Prog13Procedure;
+import net.mcreator.explosivegg.procedures.Prog12Procedure;
+import net.mcreator.explosivegg.procedures.Prog11Procedure;
+import net.mcreator.explosivegg.procedures.Prog10Procedure;
+import net.mcreator.explosivegg.procedures.NoneProcedure;
+import net.mcreator.explosivegg.procedures.None2Procedure;
 import net.mcreator.explosivegg.procedures.MinionFalseProcedure;
 import net.mcreator.explosivegg.procedures.LightningFalseProcedure;
 import net.mcreator.explosivegg.procedures.FireballFalseProcedure;
@@ -53,49 +69,62 @@ public class RingProgressScreen extends AbstractContainerScreen<RingProgressMenu
 		RenderSystem.defaultBlendFunc();
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
-		RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar.png"));
-		this.blit(ms, this.leftPos + 5, this.topPos + 23, 0, 0, 220, 32, 220, 32);
-
-		RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar1.png"));
-		this.blit(ms, this.leftPos + 6, this.topPos + 23, 0, 0, 220, 32, 220, 32);
-
-		RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar2.png"));
-		this.blit(ms, this.leftPos + 5, this.topPos + 23, 0, 0, 220, 32, 220, 32);
-
-		RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar3.png"));
-		this.blit(ms, this.leftPos + 5, this.topPos + 23, 0, 0, 220, 32, 220, 32);
-
-		RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar4.png"));
-		this.blit(ms, this.leftPos + 6, this.topPos + 23, 0, 0, 220, 32, 220, 32);
-
-		RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar5.png"));
-		this.blit(ms, this.leftPos + 6, this.topPos + 23, 0, 0, 220, 32, 220, 32);
-
-		RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar6.png"));
-		this.blit(ms, this.leftPos + 6, this.topPos + 23, 0, 0, 220, 32, 220, 32);
-
-		RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar7.png"));
-		this.blit(ms, this.leftPos + 6, this.topPos + 23, 0, 0, 220, 32, 220, 32);
-
-		RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar8.png"));
-		this.blit(ms, this.leftPos + 6, this.topPos + 23, 0, 0, 220, 32, 220, 32);
-
-		RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar9.png"));
-		this.blit(ms, this.leftPos + 5, this.topPos + 23, 0, 0, 220, 32, 220, 32);
-
-		RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar10.png"));
-		this.blit(ms, this.leftPos + 5, this.topPos + 23, 0, 0, 220, 32, 220, 32);
-
-		RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar11.png"));
-		this.blit(ms, this.leftPos + 5, this.topPos + 23, 0, 0, 220, 32, 220, 32);
-
-		RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar12.png"));
-		this.blit(ms, this.leftPos + 6, this.topPos + 23, 0, 0, 220, 32, 220, 32);
-
-		RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar13.png"));
-		this.blit(ms, this.leftPos + 6, this.topPos + 23, 0, 0, 220, 32, 220, 32);
-
+		if (Prog13Procedure.execute(world)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar.png"));
+			this.blit(ms, this.leftPos + 5, this.topPos + 23, 0, 0, 220, 32, 220, 32);
+		}
+		if (Prog12Procedure.execute(world)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar1.png"));
+			this.blit(ms, this.leftPos + 5, this.topPos + 23, 0, 0, 220, 32, 220, 32);
+		}
+		if (Prog11Procedure.execute(world)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar2.png"));
+			this.blit(ms, this.leftPos + 5, this.topPos + 23, 0, 0, 220, 32, 220, 32);
+		}
+		if (Prog10Procedure.execute(world)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar3.png"));
+			this.blit(ms, this.leftPos + 5, this.topPos + 23, 0, 0, 220, 32, 220, 32);
+		}
+		if (Prog9Procedure.execute(world)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar4.png"));
+			this.blit(ms, this.leftPos + 6, this.topPos + 23, 0, 0, 220, 32, 220, 32);
+		}
+		if (Prog8Procedure.execute(world)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar5.png"));
+			this.blit(ms, this.leftPos + 6, this.topPos + 23, 0, 0, 220, 32, 220, 32);
+		}
+		if (Prog7Procedure.execute(world)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar6.png"));
+			this.blit(ms, this.leftPos + 6, this.topPos + 23, 0, 0, 220, 32, 220, 32);
+		}
+		if (Prog6Procedure.execute(world)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar7.png"));
+			this.blit(ms, this.leftPos + 6, this.topPos + 23, 0, 0, 220, 32, 220, 32);
+		}
+		if (Prog5Procedure.execute(world)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar8.png"));
+			this.blit(ms, this.leftPos + 6, this.topPos + 23, 0, 0, 220, 32, 220, 32);
+		}
+		if (Prog4Procedure.execute(world)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar9.png"));
+			this.blit(ms, this.leftPos + 5, this.topPos + 23, 0, 0, 220, 32, 220, 32);
+		}
+		if (Prog3Procedure.execute(world)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar10.png"));
+			this.blit(ms, this.leftPos + 5, this.topPos + 23, 0, 0, 220, 32, 220, 32);
+		}
+		if (Prog2Procedure.execute(world)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar11.png"));
+			this.blit(ms, this.leftPos + 5, this.topPos + 23, 0, 0, 220, 32, 220, 32);
+		}
+		if (Prog1Procedure.execute(world)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar12.png"));
+			this.blit(ms, this.leftPos + 6, this.topPos + 23, 0, 0, 220, 32, 220, 32);
+		}
+		if (ProgProcedure.execute(world)) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("explosivegg:textures/screens/progbar13.png"));
+			this.blit(ms, this.leftPos + 5, this.topPos + 23, 0, 0, 220, 32, 220, 32);
+		}
 		RenderSystem.disableBlend();
 	}
 
@@ -115,28 +144,33 @@ public class RingProgressScreen extends AbstractContainerScreen<RingProgressMenu
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, "Next Ability:", 8, 7, -12829636);
+		if (NoneProcedure.execute(world))
+			this.font.draw(poseStack, "Next Ability:", 8, 7, -12829636);
 		if (FireballFalseProcedure.execute(world))
 			this.font.draw(poseStack, "Fireball", 80, 8, -10092544);
 		if (LightningFalseProcedure.execute(world))
 			this.font.draw(poseStack, "Lightning", 80, 8, -3342337);
 		if (MinionFalseProcedure.execute(world))
 			this.font.draw(poseStack, "Minion", 80, 8, -10066330);
-		this.font.draw(poseStack, "Your current task:", 8, 41, -12829636);
+		if (NoneProcedure.execute(world))
+			this.font.draw(poseStack, "Your current task:", 8, 41, -12829636);
 		if (FireballFalseProcedure.execute(world))
 			this.font.draw(poseStack, "Kill 250 mobs/creatures while you're invisible", 8, 57, -16777216);
 		if (FireballFalseProcedure.execute(world))
-			this.font.draw(poseStack, "" + (int) (ExplosiveggModVariables.MapVariables.get(world).Kills) + "", 8, 79, -12829636);
+			this.font.draw(poseStack, "" + (int) (ExplosiveggModVariables.MapVariables.get(world).Kills) + "", 9, 79, -12829636);
 		if (LightningFalseProcedure.execute(world))
 			this.font.draw(poseStack, "" + (int) ((entity.getCapability(ExplosiveggModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new ExplosiveggModVariables.PlayerVariables())).FireUse) + "", 8, 79, -12829636);
 		if (MinionFalseProcedure.execute(world))
 			this.font.draw(poseStack, "" + (ExplosiveggModVariables.MapVariables.get(world).LightningUse) + "", 8, 79, -12829636);
-		this.font.draw(poseStack, "Left", 30, 79, -12829636);
+		if (NoneProcedure.execute(world))
+			this.font.draw(poseStack, "Left", 30, 79, -12829636);
 		if (LightningFalseProcedure.execute(world))
 			this.font.draw(poseStack, "Use the fireball ability 100 times", 8, 57, -16777216);
 		if (MinionFalseProcedure.execute(world))
 			this.font.draw(poseStack, "Use the lightning ability 80 times", 8, 56, -16777216);
+		if (None2Procedure.execute(world))
+			this.font.draw(poseStack, "You have unlocked all the abilities!", 33, 49, -16777216);
 	}
 
 	@Override
